@@ -1,0 +1,26 @@
+{% twig_js name="BlockCategory" %}
+<div class="main wrapper section-wrapper clearfix" itemscope itemtype="http://schema.org/Offer">
+    <article class="section">
+        {% if block.getTitle() %}
+            <h2 itemprop="name" class="title title-green">{{ block.getTitle() }}</h2>
+        {% endif %}
+        <div itemprop="description" class="block">
+            {{ block.getContent() | raw }}
+        </div>
+        <div class="ombrage"></div>
+    </article>
+    {% if block.hasImages() %}
+        <ul class="section-image">
+            {% set images = block.getImages() %}
+            {% for image in images %}
+                {% if clientRendered is defined %}
+                    <li><img src="{{ image.getThumb('category')  }}" alt="{{ image.getName() }}" data-thumb="{{ image.getUrl() }}" height="329" width="360"></li>
+                {% elseif image is defined %}
+                    <li><img src="{{ image.getUrl()  }}" alt="{{ image.getName() }}" data-thumb="{{ image.getUrl() }}" height="329" width="360"></li>
+                {% else %}
+                <li><img src="{{ image.getUrl(false) | imagine_filter('category')  }}" alt="{{ image.getName() }}" data-thumb="{{ image.getUrl() }}" height="329" width="360"></li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    {% endif %}
+</div>

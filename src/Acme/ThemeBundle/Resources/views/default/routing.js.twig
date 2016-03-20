@@ -1,0 +1,14 @@
+var AcmeappRoutes = {
+    'contact.html': 'contactAction'
+};
+
+{% for route in routes %}
+    {% if route.slug == 'index' %}
+        AcmeappRoutes[''] = 'defaultAction';
+    {% endif %}
+    AcmeappRoutes['{{ route.slug }}.html'] =
+    {% if route.category is defined and route.category %}'sectionPageAction'{% else %}'defaultAction'{% endif %};
+{% endfor %}
+
+var isProd = {% if isProd %}true{% else %}false{% endif %};
+var host = "{{ host }}";

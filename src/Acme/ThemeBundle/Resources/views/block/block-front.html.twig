@@ -1,0 +1,11 @@
+{% twig_js name="BlockFront" %}
+<div class="main wrapper">
+    <article class="slider" itemscope itemtype="http://schema.org/HomeAnAcmenstructionBusiness">
+        {% if block.getTitle() %}<h2 itemprop="alternateName">{{ block.getTitle() }}</h2>{% endif %}
+        {{ block.getContent() | raw }}
+        {% if block.hasImages() %}
+            <img itemprop="image" class="slide" src="{{ block.getFirstImageUrl() }}" alt="{{ block.getFirstImageName() }}" width="792" height="338">
+        {% endif %}
+    </article>
+    <div class="ombrage mb"></div>
+</div>

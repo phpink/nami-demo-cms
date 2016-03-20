@@ -1,0 +1,114 @@
+
+<nav class="menu" id="menu" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+    <div id="toggle-menu" class="open">Menu</div>
+    <ul>
+        <li class="homelink">
+            <a itemprop="url" href="{{ path('nami_front_homepage') }}">
+                <span itemprop="name">Accueil</span>
+            </a>
+        </li>
+        <li class="companylink">
+            <a itemprop="url" href="{{ path('nami_front_page', { 'slug': 'societe.html' }) }}">
+                <span itemprop="name">La société</span>
+            </a>
+        </li>
+        <li class="studylink">
+            <strong itemprop="name">Étude</strong>
+            <ul>
+                <li class="arrow">
+                <li>
+                    <a itemprop="url" href="{{ path('nami_front_page', { 'slug': 'etude/analyse.html' }) }}">
+                        <span itemprop="name">Analyse du site & Conseil</span>
+                    </a>
+                </li>
+                <li>
+                    <a itemprop="url" href="{{ path('nami_front_page', { 'slug': 'etude/plan.html' }) }}">
+                        <span itemprop="name">Esquisse & Plan</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="creationlink">
+            <strong itemprop="name">Création</strong>
+            <ul>
+                <li class="arrow">
+                <li>
+                    <a itemprop="url" href="{{ path('nami_front_page', { 'slug': 'creation/vegetalisation.html' }) }}">
+                        <span itemprop="name">Végétalisaton</span>
+                    </a>
+                </li>
+                <li>
+                    <a itemprop="url" href="{{ path('nami_front_page', { 'slug': 'creation/engazonnement.html' }) }}">
+                        <span itemprop="name">Engazonnement, plaquage</span>
+                    </a>
+                </li>
+                <li>
+                    <a itemprop="url" href="{{ path('nami_front_page', { 'slug': 'creation/arrosage.html' }) }}">
+                        <span itemprop="name">Arrosage intégré</span>
+                    </a>
+                </li>
+                <li>
+                    <a itemprop="url" href="{{ path('nami_front_page', { 'slug': 'creation/cloture-portails.html' }) }}">
+                        <span itemprop="name">Clôture & Portails</span>
+                    </a>
+                </li>
+                <li>
+                    <a itemprop="url" href="{{ path('nami_front_page', { 'slug': 'creation/terrasse-bois.html' }) }}">
+                        <span itemprop="name">Terrasse bois</span>
+                    </a>
+                </li>
+                <li>
+                    <a itemprop="url" href="{{ path('nami_front_page', { 'slug': 'creation/mobilier.html' }) }}">
+                        <span itemprop="name">Mobilier</span>
+                    </a>
+                </li>
+                <li>
+                    <a itemprop="url" href="{{ path('nami_front_page', { 'slug': 'creation/terrassement.html' }) }}">
+                        <span itemprop="name">Terrassement</span>
+                    </a>
+                </li>
+                <li>
+                    <a itemprop="url" href="{{ path('nami_front_page', { 'slug': 'creation/maconnerie-paysagere.html' }) }}">
+                        <span itemprop="name">Maçonnerie paysagère</span>
+                    </a>
+                </li>
+                <li>
+                    <a itemprop="url" href="{{ path('nami_front_page', { 'slug': 'creation/bassins.html' }) }}">
+                        <span itemprop="name">Bassins</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="maintenancelink">
+            <strong itemprop="name">Entretien</strong>
+            <ul>
+                <li class="arrow">
+                <li>
+                    <a itemprop="url" href="{{ path('nami_front_page', { 'slug': 'entretien/taille.html' }) }}">
+                        <span itemprop="name">Taille</span>
+                    </a>
+                </li>
+                <li>
+                    <a itemprop="url" href="{{ path('nami_front_page', { 'slug': 'entretien/elagage.html' }) }}">
+                        <span itemprop="name">Élagage</span>
+                    </a>
+                </li>
+                <li>
+                    <a itemprop="url" href="{{ path('nami_front_page', { 'slug': 'entretien/gazon.html' }) }}">
+                        <span itemprop="name">Entretien gazon</span>
+                    </a>
+                </li>
+                <li>
+                    <a itemprop="url" href="{{ path('nami_front_page', { 'slug': 'entretien/tonte.html' }) }}">
+                        <span itemprop="name">Tonte</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li class="contactlink">
+            <a itemprop="url" href="{{ path('nami_front_page', { 'slug': 'contact.html' }) }}">
+                <span itemprop="name">Contact</span>
+            </a>
+        </li>
+    </ul>
+</nav>

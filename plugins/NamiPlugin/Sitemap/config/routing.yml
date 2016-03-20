@@ -1,0 +1,5 @@
+namiplugin_sitemap_index:
+    path:     /sitemap.xml
+    defaults: { _controller: namiplugin_sitemap_controller:indexAction }
+    requirements:
+        _method:  GET

@@ -1,0 +1,35 @@
+liip_imagine:
+    resource: "@LiipImagineBundle/Resources/config/routing.xml"
+
+nami_api:
+  resource: "@NamiCoreBundle/Resources/config/routing.yml"
+  type:     rest
+  prefix:   /api
+  options:
+      expose: true
+
+nami_api_doc:
+  resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
+  prefix:   /api-doc
+
+#nami_plugins:
+#    resource: "@NamiCoreBundle/Resources/config/routing.yml"
+#    type: namiplugin
+
+nami_admin:
+    resource: "@NamiAdminBundle/Resources/config/routing.yml"
+    prefix:   /admin
+
+nami_front_homepage:
+    path:     /
+    defaults: { _controller: NamiCoreBundle:Frontend:index }
+    requirements:
+        _method:  GET|POST
+
+nami_front_page:
+    path:     /{slug}
+    defaults: { _controller: NamiCoreBundle:Frontend:index }
+    requirements:
+        _method:  GET|POST
+        slug: .+
+

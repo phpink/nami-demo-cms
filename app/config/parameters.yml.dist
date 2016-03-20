@@ -1,0 +1,37 @@
+parameters:
+    host: http://www.nami.com
+    secret: l9Y3prfZW2aE34olJVzvdXuUr5k6yyASmB3ShdMhH8k
+
+    nami_core.database_adapter: 'odm'
+    nami_core.database_driver: ""
+    nami_core.database_host: localhost
+    nami_core.database_name: ~
+    nami_core.database_port: 27017
+    nami_core.database_user: ~
+    nami_core.database_pass: ~
+    nami_core.cache_host: localhost
+    nami_core.cache_port: 27017
+    nami_core.locale: ~
+    nami_core.upload_dir: '/media/upload'
+    nami_core.plugin_path: '%kernel.root_dir%/../plugins'
+
+    nami_core.mailer_to: dev@localhost
+    nami_core.mailer_from: contact@localhost
+    nami_core.mailer_transport: ~
+    nami_core.mailer_host: localhost
+    nami_core.mailer_port: 25
+    nami_core.mailer_username: ~
+    nami_core.mailer_password: ~
+    nami_core.mailer_encryption: ~
+    nami_core.private_key_path: '%kernel.root_dir%/app/config/jwt/private.pem'
+    nami_core.public_key_path: '%kernel.root_dir%/app/config/jwt/public.pem'
+    nami_core.ssh_passphrase: "NamiPassphraseBasic2015"
+    nami_core.token_ttl: 86400
+    nami_core.reset_token_ttl: 604800
+    nami_core.locale: en
+    nami_core.front_url: %host%
+    nami_core.front_url_confirmation: "%nami_core.front_url%/user/confirm/{token}"
+    nami_core.front_url_resetting: "%nami_core.front_url%/user/reset/{token}"
+    nami_core.google_api_keyfile: ~
+    nami_core.google_api_id: ~
+    nami_core.google_analytics_view: ~

@@ -1,0 +1,26 @@
+imports:
+    - { resource: config_dev.yml }
+
+framework:
+    test: ~
+    profiler:
+        enabled: false
+
+web_profiler:
+    toolbar: false
+    intercept_redirects: false
+
+swiftmailer:
+    disable_delivery: true
+
+# Doctrine Configuration:
+doctrine:
+    dbal:
+        connections:
+            default:
+                driver:   pdo_sqlite
+                path:     %kernel.root_dir%/../src/Nami/ApiBundle/Tests/test.db
+                charset: utf8
+
+liip_functional_test:
+    cache_sqlite_db: true

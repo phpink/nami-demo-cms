@@ -1,0 +1,11 @@
+{% twig_js name="BlockDefault" %}
+<div class="main wrapper">
+    <article class="block clearfix">
+        {% if block.getTitle() %}<h3>{{ block.getTitle() }}</h3>{% endif %}
+        {{ block.getContent() | raw }}
+        {% if block.hasImages() %}
+            <img itemprop="image" class="slide" src="{{ block.getFirstImageUrl() }}" alt="{{ block.getFirstImageName() }}" width="792" height="338">
+        {% endif %}
+    </article>
+    <div class="ombrage"></div>
+</div>
