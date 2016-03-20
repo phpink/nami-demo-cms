@@ -26,6 +26,13 @@
     {% include 'AcmeThemeBundle:partials:menu.html.twig' %}
 
     <div class="main-container">
+        {% for block in page.getBlocks() %}
+            {%  if block.getType() == 'default' %}
+                {% include 'AcmeThemeBundle:block:block-' ~ block.getTemplate() ~ '.html.twig' with {'block': block} %}
+            {% else %}
+                {{ block.getPlugin().getOutput()|raw }}
+            {% endif %}
+        {% endfor %}
     </div>
     {% javascripts output='js/Acme.main.js' filter="?yui_js"
     '@AcmeThemeBundle/Resources/js/main.js'
