@@ -24,7 +24,7 @@ trait UserDataTrait
      */
     public function setContainer(ContainerInterface $container = null) {
         $this->container = $container;
-        $this->tokenGenerator = $this->container->get('nami_api.util.token_generator');
+        $this->tokenGenerator = $this->container->get('nami_core.util.token_generator');
     }
 
     public function createUser($username, $data)

@@ -32,6 +32,7 @@
       <parameter key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</parameter>
       <parameter key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</parameter>
       <parameter key="SensioGeneratorBundle">Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle</parameter>
+      <parameter key="DoctrineFixturesBundle">Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle</parameter>
     </parameter>
     <parameter key="kernel.charset">UTF-8</parameter>
     <parameter key="kernel.container_class">appDevDebugProjectContainer</parameter>
@@ -383,7 +384,11 @@
     <parameter key="assetic.value_supplier.class">Symfony\Bundle\AsseticBundle\DefaultValueSupplier</parameter>
     <parameter key="assetic.node.paths" type="collection"/>
     <parameter key="assetic.cache_dir">/home/geoffroy/Dev/CMS/app/cache/dev/assetic</parameter>
-    <parameter key="assetic.bundles" type="collection"/>
+    <parameter key="assetic.bundles" type="collection">
+      <parameter>NamiCoreBundle</parameter>
+      <parameter>NamiAdminBundle</parameter>
+      <parameter>AcmeThemeBundle</parameter>
+    </parameter>
     <parameter key="assetic.twig_extension.class">Symfony\Bundle\AsseticBundle\Twig\AsseticExtension</parameter>
     <parameter key="assetic.twig_formula_loader.class">Assetic\Extension\Twig\TwigFormulaLoader</parameter>
     <parameter key="assetic.helper.dynamic.class">Symfony\Bundle\AsseticBundle\Templating\DynamicAsseticHelper</parameter>
@@ -1262,7 +1267,7 @@
             <argument>/home/geoffroy/Dev/CMS/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.fr.xlf</argument>
             <argument>/home/geoffroy/Dev/CMS/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.fr.xlf</argument>
             <argument>/home/geoffroy/Dev/CMS/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.fr.xlf</argument>
-            <argument>/home/geoffroy/Dev/CMS/vendor/phpink/nami-core-bundle/Resources/translations/NamiCoreBundle.fr.yml</argument>
+            <argument>/home/geoffroy/Dev/phpink/nami-core-bundle/Resources/translations/NamiCoreBundle.fr.yml</argument>
           </argument>
           <argument key="tr" type="collection">
             <argument>/home/geoffroy/Dev/CMS/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.tr.xlf</argument>
@@ -1300,7 +1305,7 @@
             <argument>/home/geoffroy/Dev/CMS/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.it.xlf</argument>
             <argument>/home/geoffroy/Dev/CMS/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.it.xlf</argument>
             <argument>/home/geoffroy/Dev/CMS/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.it.xlf</argument>
-            <argument>/home/geoffroy/Dev/CMS/vendor/phpink/nami-core-bundle/Resources/translations/NamiCoreBundle.it.yml</argument>
+            <argument>/home/geoffroy/Dev/phpink/nami-core-bundle/Resources/translations/NamiCoreBundle.it.yml</argument>
           </argument>
           <argument key="hu" type="collection">
             <argument>/home/geoffroy/Dev/CMS/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.hu.xlf</argument>
@@ -1316,7 +1321,7 @@
             <argument>/home/geoffroy/Dev/CMS/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.en.xlf</argument>
             <argument>/home/geoffroy/Dev/CMS/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.en.xlf</argument>
             <argument>/home/geoffroy/Dev/CMS/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.en.xlf</argument>
-            <argument>/home/geoffroy/Dev/CMS/vendor/phpink/nami-core-bundle/Resources/translations/NamiCoreBundle.en.yml</argument>
+            <argument>/home/geoffroy/Dev/phpink/nami-core-bundle/Resources/translations/NamiCoreBundle.en.yml</argument>
           </argument>
           <argument key="el" type="collection">
             <argument>/home/geoffroy/Dev/CMS/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.el.xlf</argument>
@@ -1327,7 +1332,7 @@
             <argument>/home/geoffroy/Dev/CMS/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.de.xlf</argument>
             <argument>/home/geoffroy/Dev/CMS/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.de.xlf</argument>
             <argument>/home/geoffroy/Dev/CMS/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.de.xlf</argument>
-            <argument>/home/geoffroy/Dev/CMS/vendor/phpink/nami-core-bundle/Resources/translations/NamiCoreBundle.de.yml</argument>
+            <argument>/home/geoffroy/Dev/phpink/nami-core-bundle/Resources/translations/NamiCoreBundle.de.yml</argument>
           </argument>
           <argument key="cy" type="collection">
             <argument>/home/geoffroy/Dev/CMS/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.cy.xlf</argument>
@@ -1353,7 +1358,7 @@
             <argument>/home/geoffroy/Dev/CMS/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.es.xlf</argument>
             <argument>/home/geoffroy/Dev/CMS/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/translations/validators.es.xlf</argument>
             <argument>/home/geoffroy/Dev/CMS/vendor/symfony/symfony/src/Symfony/Component/Security/Core/Exception/../Resources/translations/security.es.xlf</argument>
-            <argument>/home/geoffroy/Dev/CMS/vendor/phpink/nami-core-bundle/Resources/translations/NamiCoreBundle.es.yml</argument>
+            <argument>/home/geoffroy/Dev/phpink/nami-core-bundle/Resources/translations/NamiCoreBundle.es.yml</argument>
           </argument>
           <argument key="nn" type="collection">
             <argument>/home/geoffroy/Dev/CMS/vendor/symfony/symfony/src/Symfony/Component/Validator/Resources/translations/validators.nn.xlf</argument>
@@ -1927,7 +1932,7 @@
       </call>
       <call method="addYamlMappings">
         <argument type="collection">
-          <argument>/home/geoffroy/Dev/CMS/vendor/phpink/nami-core-bundle/Resources/config/validation.yml</argument>
+          <argument>/home/geoffroy/Dev/phpink/nami-core-bundle/Resources/config/validation.yml</argument>
         </argument>
       </call>
       <call method="enableAnnotationMapping">
@@ -2928,7 +2933,11 @@
             <argument type="service" id="templating.name_parser"/>
             <argument>false</argument>
             <argument type="collection"/>
-            <argument type="collection"/>
+            <argument type="collection">
+              <argument>NamiCoreBundle</argument>
+              <argument>NamiAdminBundle</argument>
+              <argument>AcmeThemeBundle</argument>
+            </argument>
             <argument type="service">
               <service class="Symfony\Bundle\AsseticBundle\DefaultValueSupplier" public="false">
                 <argument type="service" id="service_container"/>
@@ -3070,6 +3079,87 @@
           </service>
         </argument>
       </argument>
+      <call method="addResource">
+        <argument type="service">
+          <service class="Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource" public="false">
+            <tag name="assetic.templating.twig"/>
+            <tag name="assetic.formula_resource" loader="twig"/>
+            <argument type="collection">
+              <argument type="service">
+                <service class="%assetic.directory_resource.class%" public="false">
+                  <argument type="service" id="templating.loader"/>
+                  <argument>NamiCoreBundle</argument>
+                  <argument>/home/geoffroy/Dev/CMS/app/Resources/NamiCoreBundle/views</argument>
+                  <argument>/\.[^.]+\.twig$/</argument>
+                </service>
+              </argument>
+              <argument type="service">
+                <service class="%assetic.directory_resource.class%" public="false">
+                  <argument type="service" id="templating.loader"/>
+                  <argument>NamiCoreBundle</argument>
+                  <argument>/home/geoffroy/Dev/phpink/nami-core-bundle/Resources/views</argument>
+                  <argument>/\.[^.]+\.twig$/</argument>
+                </service>
+              </argument>
+            </argument>
+          </service>
+        </argument>
+        <argument>twig</argument>
+      </call>
+      <call method="addResource">
+        <argument type="service">
+          <service class="Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource" public="false">
+            <tag name="assetic.templating.twig"/>
+            <tag name="assetic.formula_resource" loader="twig"/>
+            <argument type="collection">
+              <argument type="service">
+                <service class="%assetic.directory_resource.class%" public="false">
+                  <argument type="service" id="templating.loader"/>
+                  <argument>NamiAdminBundle</argument>
+                  <argument>/home/geoffroy/Dev/CMS/app/Resources/NamiAdminBundle/views</argument>
+                  <argument>/\.[^.]+\.twig$/</argument>
+                </service>
+              </argument>
+              <argument type="service">
+                <service class="%assetic.directory_resource.class%" public="false">
+                  <argument type="service" id="templating.loader"/>
+                  <argument>NamiAdminBundle</argument>
+                  <argument>/home/geoffroy/Dev/CMS/vendor/phpink/nami-admin-bundle/Resources/views</argument>
+                  <argument>/\.[^.]+\.twig$/</argument>
+                </service>
+              </argument>
+            </argument>
+          </service>
+        </argument>
+        <argument>twig</argument>
+      </call>
+      <call method="addResource">
+        <argument type="service">
+          <service class="Symfony\Bundle\AsseticBundle\Factory\Resource\CoalescingDirectoryResource" public="false">
+            <tag name="assetic.templating.twig"/>
+            <tag name="assetic.formula_resource" loader="twig"/>
+            <argument type="collection">
+              <argument type="service">
+                <service class="%assetic.directory_resource.class%" public="false">
+                  <argument type="service" id="templating.loader"/>
+                  <argument>AcmeThemeBundle</argument>
+                  <argument>/home/geoffroy/Dev/CMS/app/Resources/AcmeThemeBundle/views</argument>
+                  <argument>/\.[^.]+\.twig$/</argument>
+                </service>
+              </argument>
+              <argument type="service">
+                <service class="%assetic.directory_resource.class%" public="false">
+                  <argument type="service" id="templating.loader"/>
+                  <argument>AcmeThemeBundle</argument>
+                  <argument>/home/geoffroy/Dev/CMS/src/Acme/ThemeBundle/Resources/views</argument>
+                  <argument>/\.[^.]+\.twig$/</argument>
+                </service>
+              </argument>
+            </argument>
+          </service>
+        </argument>
+        <argument>twig</argument>
+      </call>
       <call method="addResource">
         <argument type="service">
           <service class="Symfony\Bundle\AsseticBundle\Factory\Resource\DirectoryResource" public="false">
@@ -3310,7 +3400,7 @@
                       <argument type="service" id="annotation_reader"/>
                       <argument type="collection">
                         <argument>/home/geoffroy/Dev/CMS/vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Document</argument>
-                        <argument>/home/geoffroy/Dev/CMS/vendor/phpink/nami-core-bundle/Model/Orm</argument>
+                        <argument>/home/geoffroy/Dev/phpink/nami-core-bundle/Model/Orm</argument>
                       </argument>
                     </service>
                   </argument>
@@ -3322,7 +3412,7 @@
                       <argument type="service" id="annotation_reader"/>
                       <argument type="collection">
                         <argument>/home/geoffroy/Dev/CMS/vendor/gedmo/doctrine-extensions/lib/Gedmo/Tree/Document</argument>
-                        <argument>/home/geoffroy/Dev/CMS/vendor/phpink/nami-core-bundle/Model/Orm</argument>
+                        <argument>/home/geoffroy/Dev/phpink/nami-core-bundle/Model/Orm</argument>
                       </argument>
                     </service>
                   </argument>
@@ -3796,12 +3886,13 @@
         <argument key="Lexik\Bundle\JWTAuthenticationBundle">/home/geoffroy/Dev/CMS/vendor/lexik/jwt-authentication-bundle/Lexik/Bundle/JWTAuthenticationBundle/Resources/config/serializer</argument>
         <argument key="Gfreeau\Bundle\GetJWTBundle">/home/geoffroy/Dev/CMS/vendor/gfreeau/get-jwt-bundle/Gfreeau/Bundle/GetJWTBundle/Resources/config/serializer</argument>
         <argument key="FOS\JsRoutingBundle">/home/geoffroy/Dev/CMS/vendor/friendsofsymfony/jsrouting-bundle/Resources/config/serializer</argument>
-        <argument key="PhpInk\Nami\CoreBundle">/home/geoffroy/Dev/CMS/vendor/phpink/nami-core-bundle/Resources/config/serializer</argument>
+        <argument key="PhpInk\Nami\CoreBundle">/home/geoffroy/Dev/phpink/nami-core-bundle/Resources/config/serializer</argument>
         <argument key="PhpInk\Nami\AdminBundle">/home/geoffroy/Dev/CMS/vendor/phpink/nami-admin-bundle/Resources/config/serializer</argument>
         <argument key="Acme\ThemeBundle">/home/geoffroy/Dev/CMS/src/Acme/ThemeBundle/Resources/config/serializer</argument>
         <argument key="Symfony\Bundle\WebProfilerBundle">/home/geoffroy/Dev/CMS/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/config/serializer</argument>
         <argument key="Sensio\Bundle\DistributionBundle">/home/geoffroy/Dev/CMS/vendor/sensio/distribution-bundle/Sensio/Bundle/DistributionBundle/Resources/config/serializer</argument>
         <argument key="Sensio\Bundle\GeneratorBundle">/home/geoffroy/Dev/CMS/vendor/sensio/generator-bundle/Resources/config/serializer</argument>
+        <argument key="Doctrine\Bundle\FixturesBundle">/home/geoffroy/Dev/CMS/vendor/doctrine/doctrine-fixtures-bundle/Resources/config/serializer</argument>
       </argument>
     </service>
     <service id="jms_serializer.metadata_factory" class="Metadata\MetadataFactory" public="false">
@@ -4683,6 +4774,7 @@
         <argument key="WebProfilerBundle">Symfony\Bundle\WebProfilerBundle\WebProfilerBundle</argument>
         <argument key="SensioDistributionBundle">Sensio\Bundle\DistributionBundle\SensioDistributionBundle</argument>
         <argument key="SensioGeneratorBundle">Sensio\Bundle\GeneratorBundle\SensioGeneratorBundle</argument>
+        <argument key="DoctrineFixturesBundle">Doctrine\Bundle\FixturesBundle\DoctrineFixturesBundle</argument>
       </argument>
     </service>
     <service id="fos_js_routing.controller" class="FOS\JsRoutingBundle\Controller\Controller">
@@ -5180,7 +5272,7 @@
         <argument>NelmioApiDoc</argument>
       </call>
       <call method="addPath">
-        <argument>/home/geoffroy/Dev/CMS/vendor/phpink/nami-core-bundle/Resources/views</argument>
+        <argument>/home/geoffroy/Dev/phpink/nami-core-bundle/Resources/views</argument>
         <argument>NamiCore</argument>
       </call>
       <call method="addPath">
