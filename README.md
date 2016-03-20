@@ -14,8 +14,8 @@ Docker containers
 
 [Docker][1] containers are available to use :
 
-* Nginx + PhpFpm/LdapExt container                       => nami.dev
-* Mysql container                                        => mysql.dev
+* Nginx + PhpFpm container => nami.dev
+* Mysql container          => mysql.dev
 
 To get your environment ready, run :
 
@@ -23,7 +23,7 @@ To get your environment ready, run :
     
 And get the application ready :
 
-    user@local:/dev$ docker exec -ti nami_nginx /bin/bash
+    user@local:/dev$ docker exec -ti cms_nami /bin/bash
     
     root@ad46b:/var/www$ composer install  
     
