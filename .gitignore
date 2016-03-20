@@ -1,5 +1,7 @@
 .idea/*
 /vendor/
 web/*
+app/cache/*
+app/logs/*
 .gitkeep
 

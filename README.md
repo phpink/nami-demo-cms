@@ -4,6 +4,8 @@ Nami Demo Application
 Welcome to the NAMI Demo Application - a fully-functional NAMI
 application that you can use as the skeleton for your new applications.
 
+![Nami Logo](https://github.com/phpink/nami-core-bundle/raw/master/Docs/namiLogo.png)
+
 For details on how to download and get started with Symfony, see the
 installation chapter of the Symfony Documentation.
 
