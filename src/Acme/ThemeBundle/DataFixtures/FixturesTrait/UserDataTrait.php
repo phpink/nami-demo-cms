@@ -63,7 +63,7 @@ trait UserDataTrait
     /**
      * {@inheritDoc}
      */
-    public function load(ObjectManager $manager)
+    public function loadUsers(ObjectManager $manager)
     {
         $this->manager = $manager;
         $this->userProvider = $this->container->get('nami_core.user_provider');
@@ -87,13 +87,5 @@ trait UserDataTrait
         }
 
         $this->manager->flush();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getOrder()
-    {
-        return 2; // the order in which fixtures will be loaded
     }
 }

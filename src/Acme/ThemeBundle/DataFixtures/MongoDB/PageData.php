@@ -28,4 +28,12 @@ class PageData extends AbstractFixture implements OrderedFixtureInterface
     {
         return new Block($title, $content);
     }
+
+    /**
+     * {@inheritdoc}
+     */
+    public function getOrder()
+    {
+        return 6;
+    }
 }

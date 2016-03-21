@@ -8,7 +8,7 @@ trait CategoryDataTrait
 {
     public function createCategory($key, $data)
     {
-        $category = $this->createModel();
+        $category = $this->createCategoryModel();
         $category
             ->setActive(true)
             ->setPosition($data['position'])
@@ -34,7 +34,7 @@ trait CategoryDataTrait
     /**
      * {@inheritDoc}
      */
-    public function load(ObjectManager $manager)
+    public function loadCategories(ObjectManager $manager)
     {
         $this->manager = $manager;
 
@@ -69,13 +69,5 @@ trait CategoryDataTrait
         }
 
         $this->manager->flush();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getOrder()
-    {
-        return 3; // the order in which fixtures will be loaded
     }
 }

@@ -7,9 +7,9 @@ use Doctrine\Common\Persistence\ObjectManager;
 trait ConfigurationDataTrait
 {
 
-    public function adAcmenfiguration($name, $value)
+    public function addConfiguration($name, $value)
     {
-        $country = $this->createModel($name, $value);
+        $country = $this->createConfigModel($name, $value);
         $this->manager->persist($country);
 
     }
@@ -17,7 +17,7 @@ trait ConfigurationDataTrait
     /**
      * {@inheritDoc}
      */
-    public function load(ObjectManager $manager)
+    public function loadConfig(ObjectManager $manager)
     {
         $this->manager = $manager;
         $configuration = array(
@@ -25,16 +25,8 @@ trait ConfigurationDataTrait
           'slogan' => ''
         );
         foreach ($configuration as $name => $value) {
-            $this->adAcmenfiguration($name, $value);
+            $this->addConfiguration($name, $value);
         }
         $this->manager->flush();
-    }
-
-    /**
-     * {@inheritDoc}
-     */
-    public function getOrder()
-    {
-        return 1; // the order in which fixtures will be loaded
     }
 }

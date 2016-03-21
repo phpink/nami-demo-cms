@@ -15,4 +15,12 @@ class ConfigurationData extends AbstractFixture implements OrderedFixtureInterfa
     {
         return new Configuration($name, $value);
     }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getOrder()
+    {
+        return 1; // the order in which fixtures will be loaded
+    }
 }

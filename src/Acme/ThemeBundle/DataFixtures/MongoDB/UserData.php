@@ -16,4 +16,12 @@ class UserData extends AbstractFixture implements OrderedFixtureInterface, Conta
     {
         return new Image($name, $folder);
     }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getOrder()
+    {
+        return 2; // the order in which fixtures will be loaded
+    }
 }

@@ -25,7 +25,7 @@ trait PageDataTrait
 
     public function createPage($key, $data)
     {
-        $page = $this->createModel();
+        $page = $this->createPageModel();
         $page
             ->setTitle($data['title'])
             ->setSlug($key)
@@ -39,7 +39,7 @@ trait PageDataTrait
                     $data['background'], 'background'
                 )
             )
-            ->setBackgrounAcmelor($data['backgrounAcmelor'])
+            ->setBackgroundColor($data['backgrounAcmelor'])
             ->setBorderColor($data['borderColor'])
             ->setFooterColor($data['footerColor'])
             ->setNegativeText($data['negativeText']);
@@ -79,7 +79,7 @@ trait PageDataTrait
     /**
      * {@inheritDoc}
      */
-    public function load(ObjectManager $manager)
+    public function loadPages(ObjectManager $manager)
     {
         $this->manager = $manager;
         $pages = array(
@@ -150,13 +150,5 @@ trait PageDataTrait
         }
 
         $this->manager->flush();
-    }
-
-    /**
-     * {@inheritdoc}
-     */
-    public function getOrder()
-    {
-        return 6;
     }
 }

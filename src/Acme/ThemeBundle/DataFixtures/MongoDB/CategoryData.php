@@ -15,4 +15,12 @@ class CategoryData extends AbstractFixture implements OrderedFixtureInterface
     {
         return new Category();
     }
+
+    /**
+     * {@inheritDoc}
+     */
+    public function getOrder()
+    {
+        return 3; // the order in which fixtures will be loaded
+    }
 }
