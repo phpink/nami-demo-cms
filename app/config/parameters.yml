@@ -22,9 +22,9 @@ parameters:
     nami_core.mailer_username: null
     nami_core.mailer_password: null
     nami_core.mailer_encryption: null
-    nami_core.private_key_path: '%kernel.root_dir%/../vendor/phpink/nami-core-bundle/Resources/config/jwt/public.pem'
-    nami_core.public_key_path: '%kernel.root_dir%/../vendor/phpink/nami-core-bundle/Resources/config/jwt/private.pem'
-    nami_core.ssh_passphrase: ''
+    nami_core.private_key_path: '%kernel.root_dir%/config/jwt/private.pem'
+    nami_core.public_key_path: '%kernel.root_dir%/config/jwt/public.pem'
+    nami_core.ssh_passphrase: 'passphrase'
     nami_core.token_ttl: 86400
     nami_core.reset_token_ttl: 604800
     nami_core.front_url: '%host%'
