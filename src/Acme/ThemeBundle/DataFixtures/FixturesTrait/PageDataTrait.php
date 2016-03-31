@@ -39,7 +39,7 @@ trait PageDataTrait
                     $data['background'], 'background'
                 )
             )
-            ->setBackgroundColor($data['backgrounAcmelor'])
+            ->setBackgroundColor($data['backgroundColor'])
             ->setBorderColor($data['borderColor'])
             ->setFooterColor($data['footerColor'])
             ->setNegativeText($data['negativeText']);
@@ -55,12 +55,14 @@ trait PageDataTrait
                 $blockData['content']
             );
             $block->setPosition($index);
-            foreach ($blockData['images'] as $image) {
-                $block->addImage(
-                    $this->createImage(
-                        $image, 'block'
-                    )
-                );
+            if (isset($blockData['images'])) {
+                foreach ($blockData['images'] as $image) {
+                    $block->addImage(
+                        $this->createImage(
+                            $image, 'block'
+                        )
+                    );
+                }
             }
             if (array_key_exists('template', $blockData)) {
                 $block->setTemplate($blockData['template']);
@@ -86,21 +88,21 @@ trait PageDataTrait
             'index' => array(
                 'title' => "Nami CMS Demo",
                 'header' => 'NAMI <strong>CMS</strong> demo app',
-                'metaKeywords' => "paysagiste, bordeaux, jardin, entretien, gironde, Acme paysage",
-                'metaDescription' => "Étude, création et entretien d'espaces verts (Gironde, 33).",
+                'metaKeywords' => "nami, cms, symfony",
+                'metaDescription' => "Nami, a basic Content management system for Symfony",
                 'background' => null,
                 'category' => null,
-                'backgrounAcmelor' => null,
+                'backgroundColor' => null,
                 'borderColor' => null,
                 'footerColor' => null,
                 'negativeText' => false,
                 'blocks' => array(
                     array(
-                        'title' => 'Paysagiste',
-                        'content' => '<p><span itemprop="description">Content managin system</span> à
-                              <span itemprop="addressLocality">Bordeaux</span> en
-                              <span itemprop="addressRegion">Gironde (33)</span> et
-                              dans le <span itemprop="addressRegion">Sud-Ouest</span>.</p>',
+                        'title' => 'Nami CMS',
+                        'content' => '<p><span itemprop="description">Content management system</span> from
+                              <span itemprop="addressLocality">Bordeaux</span> from
+                              <span itemprop="addressRegion">Gironde (33)</span> and
+                              from <span itemprop="addressRegion">Sud-Ouest</span>.</p>',
                         'template' => 'front',
                         'images' => array(
                             array(
@@ -121,6 +123,46 @@ trait PageDataTrait
                 )
 
             ),
+            'news1' => array(
+                'title' => "Nami CMS - News 1",
+                'header' => 'NAMI <strong>CMS</strong> news #1',
+                'metaKeywords' => "nami, cms, symfony",
+                'metaDescription' => "Nami, a basic Content management system for Symfony",
+                'background' => null,
+                'category' => 'news',
+                'backgroundColor' => null,
+                'borderColor' => null,
+                'footerColor' => null,
+                'negativeText' => false,
+                'blocks' => array(
+                    array(
+                        'title' => 'News 1',
+                        'content' => '<p>Nami is in dev mode.</p>',
+                        'template' => 'front'
+                    ),
+                )
+
+            ),
+            'news2' => array(
+                'title' => "Nami CMS - News 2",
+                'header' => 'NAMI <strong>CMS</strong> news #2',
+                'metaKeywords' => "nami, cms, symfony",
+                'metaDescription' => "Nami, a basic Content management system for Symfony",
+                'background' => null,
+                'category' => 'news',
+                'backgroundColor' => null,
+                'borderColor' => null,
+                'footerColor' => null,
+                'negativeText' => false,
+                'blocks' => array(
+                    array(
+                        'title' => 'News 2',
+                        'content' => '<p>Nami is in beta mode.</p>',
+                        'template' => 'front'
+                    ),
+                )
+
+            ),
             'contact' => array(
                 'title' => "Contact us",
                 'header' => 'Contact form',
@@ -129,7 +171,7 @@ trait PageDataTrait
                 'background' => null,
                 'category' => null,
                 'images' => array(),
-                'backgrounAcmelor' => null,
+                'backgroundColor' => null,
                 'borderColor' => null,
                 'footerColor' => null,
                 'negativeText' => false,

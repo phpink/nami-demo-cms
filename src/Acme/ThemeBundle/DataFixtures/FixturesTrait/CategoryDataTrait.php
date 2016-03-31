@@ -42,25 +42,25 @@ trait CategoryDataTrait
             /**
              * Main categories
              */
-            'first' => array(
+            'news' => array(
                 'position' =>  2,
                 'parent' => null,
-                'name' => 'First',
-                'title' => 'First category',
-                'header' => 'First',
-                'metaKeywords' => 'first,category,data',
-                'metaDescription' => 'First category SEO',
-                'content' => '<p>First category description</p>'
+                'name' => 'News',
+                'title' => 'News category',
+                'header' => 'News',
+                'metaKeywords' => 'news,category,data',
+                'metaDescription' => 'News category SEO',
+                'content' => '<p>News category description</p>'
             ),            
-            'Sscond' => array(
+            'Test' => array(
                 'position' =>  2,
                 'parent' => null,
-                'name' => 'Second',
-                'title' => 'Second category',
-                'header' => 'Second',
-                'metaKeywords' => 'second,category,db',
-                'metaDescription' => 'Second category SEO',
-                'content' => '<p>Second category description</p>>'
+                'name' => 'Test',
+                'title' => 'Test category',
+                'header' => 'Test',
+                'metaKeywords' => 'test,category,db',
+                'metaDescription' => 'Test category SEO',
+                'content' => '<p>Test category description</p>>'
             ),
         );
 

@@ -2,28 +2,15 @@
 
 namespace Acme\ThemeBundle\Controller;
 
-use PhpInk\Nami\CoreBundle\Controller\FrontenAcmentroller;
-use Symfony\Component\HttpFoundation\Response;
+use PhpInk\Nami\CoreBundle\Controller\FrontendController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
-class DefaultController extends FrontenAcmentroller
+class DefaultController extends FrontendController
 {
-    public function routingAction()
+    public function newAction()
     {
-        $response = new Response('', 200, array(
-            'content-type' => 'application/javascript'
+        return new JsonResponse(array(
+           'new' => true
         ));
-        $this->initRepositories();
-        return $this->render(
-            'NamiCoreBundle:default:routing.js.twig',
-            array(
-                'routes' => array_merge(
-                    $this->pageRepo->getPageRoutes(),
-                    $this->categoryRepo->getCategoryRoutes()
-                ),
-                'host' => $this->container->getParameter('host'),
-                'isProd' => ($this->get('kernel')->getEnvironment() === 'prod')
-            ), $response
-        );
-
     }
 }
