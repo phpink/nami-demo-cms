@@ -3,6 +3,6 @@
     {{ block.getContent() | raw }}
 
     {% if block.hasImages() %}
-        <img class="image-responsive" src="{{ block.getFirstImageUrl() }}" alt="{{ block.getFirstImageName() }}">
+        <img class="image-responsive" src="{{ block.getFirstImage().getPath(false) | imagine_filter('category') }}" alt="{{ block.getFirstImageName() }}">
     {% endif %}
 </div>
