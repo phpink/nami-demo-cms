@@ -1,50 +1,27 @@
-<div class="main-container">
-    <div class="main wrapper">
-        <article class="block contact-block clearfix">
-            {{ form_start(form) }}
-                <p class="cleared ph center">Vous pouvez nous écrire en remplissant le formulaire ci-dessous, ou sur <a itemprop="sameAs" href="https://www.facebook.com/pages/D-CO-paysage/606894282699738" target="_blank">la page facebook D-CO paysage</a></p>
-                {% if mailSent %}
-                    <div class="contact-status">
-                        {{ mailSent }}
-                    </div>
-                {% endif %}
-                {% if form_errors(form) %}
-                    <div class="contact-status erreur">{{ form_errors(form) }}</div>
-                {% endif %}
-                <hr class="mb">
-                <section class="trio triodouble">
-                    {{ form_widget(form.subject, {'attr': {'class': 'text'}}) }}
-                    {{ form_widget(form.name, {'attr': {'class': 'text'}}) }}
-                    {{ form_widget(form.email, {'attr': {'class': 'text'}}) }}
-                    {{ form_widget(form.company, {'attr': {'class': 'text'}}) }}
-                    {{ form_widget(form.captcha.captcha, {'attr': {'class': 'text'}}) }}
-                </section>
-            <section class="trio trioun">
-                {{ form_widget(form.message, {'attr': {'class': 'textarea'}}) }}
-                </section>
-                <section class="trio triodouble">
-                    <input id="submit" value="Envoyer le message" class="submit" type="submit">
-                </section>
-                <section class="trio trioun">
-                    <p>Si vous souhaitez joindre des fichiers à votre message, écrivez-nous directement à l'adresse <a itemprop="email" href="mailto:contact@Acmepaysage.fr">contact@Acmepaysage.fr</a></p>
-                </section>
-                <hr>
-                <section class="duo mb">
-                    <p class="bold">
-                        <span itemprop="name">D-CO paysage</span><br>
-                        <span itemprop="telephone">06 13 29 12 94</span>
-                    </p>
-                </section>
-                <section class="duo mb">
-                    <p class="bold italic">
-                        <span itemprop="streetAddress">5 bis Le Fouquet</span><br>
-                        <span itemprop="postalCode">33620</span> <span itemprop="addressLocality">Cézac</span>
-                    </p>
-                </section>
-            {{ form_end(form) }}
+<article class="block contact-block clearfix">
+    {{ form_start(form) }}
 
-        </article>
-        <div class="ombrage"></div>
+    <p class="center">Write us a message by filling the form below. Thank you.</p>
 
-    </div>
-</div>
+    {% if mailSent %}
+        <div class="alert alert-success" role="alert">
+            {{ mailSent }}
+        </div>
+    {% endif %}
+
+    {% if form_errors(form) %}
+        <div class="alert alert-danger" role="alert">{{ form_errors(form) }}</div>
+    {% endif %}
+
+    {{ form_widget(form.subject, {'attr': {'class': 'text'}}) }}
+    {{ form_widget(form.name, {'attr': {'class': 'text'}}) }}
+    {{ form_widget(form.email, {'attr': {'class': 'text'}}) }}
+    {{ form_widget(form.company, {'attr': {'class': 'text'}}) }}
+    {{ form_widget(form.captcha.captcha, {'attr': {'class': 'text'}}) }}
+    {{ form_widget(form.message, {'attr': {'class': 'textarea'}}) }}
+
+    <input id="submit" value="Envoyer le message" class="submit" type="submit">
+
+    {{ form_end(form) }}
+
+</article>

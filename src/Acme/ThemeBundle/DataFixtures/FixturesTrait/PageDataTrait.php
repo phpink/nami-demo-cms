@@ -99,15 +99,12 @@ trait PageDataTrait
                 'blocks' => array(
                     array(
                         'title' => 'Nami CMS',
-                        'content' => '<p><span itemprop="description">Content management system</span> from
-                              <span itemprop="addressLocality">Bordeaux</span> from
-                              <span itemprop="addressRegion">Gironde (33)</span> and
-                              from <span itemprop="addressRegion">Sud-Ouest</span>.</p>',
+                        'content' => '<p><span itemprop="description">Content management system</span> with Symfony 2.7</p>',
                         'template' => 'front',
                         'images' => array(
                             array(
                                 'name' => "Nami Logo",
-                                'url' => 'logo.jpg'
+                                'url' => 'namiLogo.png'
                             )
                         )
                     ),
@@ -115,8 +112,8 @@ trait PageDataTrait
                         'title' => null,
                         'content' => '<section>
                               <p>Innovation, high-end, Symfony stack.</p>
-                              <p>Improve your content administration</p>
-                              <p>Optimisze your website.</p>
+                              <p>Improve your content administration.</p>
+                              <p>Optimize your website.</p>
                           </section>',
                         'images' => array()
                     )

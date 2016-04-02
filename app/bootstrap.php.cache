@@ -978,14 +978,18 @@ return isset(static::$formats[$format]) ? static::$formats[$format][0] : null;
 }
 public function getFormat($mimeType)
 {
+$canonicalMimeType = null;
 if (false !== $pos = strpos($mimeType,';')) {
-$mimeType = substr($mimeType, 0, $pos);
+$canonicalMimeType = substr($mimeType, 0, $pos);
 }
 if (null === static::$formats) {
 static::initializeFormats();
 }
 foreach (static::$formats as $format => $mimeTypes) {
 if (in_array($mimeType, (array) $mimeTypes)) {
+return $format;
+}
+if (null !== $canonicalMimeType && in_array($canonicalMimeType, (array) $mimeTypes)) {
 return $format;
 }
 }
@@ -2373,11 +2377,11 @@ protected $booted = false;
 protected $name;
 protected $startTime;
 protected $loadClassCache;
-const VERSION ='2.7.11-DEV';
-const VERSION_ID = 20711;
+const VERSION ='2.7.12-DEV';
+const VERSION_ID = 20712;
 const MAJOR_VERSION = 2;
 const MINOR_VERSION = 7;
-const RELEASE_VERSION = 11;
+const RELEASE_VERSION = 12;
 const EXTRA_VERSION ='DEV';
 const END_OF_MAINTENANCE ='05/2018';
 const END_OF_LIFE ='05/2019';
@@ -2827,8 +2831,9 @@ return true;
 }
 public function findFile($class)
 {
-if (false === $file = apcu_fetch($this->prefix.$class)) {
-apcu_store($this->prefix.$class, $file = $this->decorated->findFile($class));
+$file = apcu_fetch($this->prefix.$class, $success);
+if (!$success) {
+apcu_store($this->prefix.$class, $file = $this->decorated->findFile($class) ?: null);
 }
 return $file;
 }

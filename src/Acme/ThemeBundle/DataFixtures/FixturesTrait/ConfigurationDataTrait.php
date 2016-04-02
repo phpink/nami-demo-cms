@@ -21,7 +21,7 @@ trait ConfigurationDataTrait
     {
         $this->manager = $manager;
         $configuration = array(
-          'title' => 'D-CO Paysage',
+          'title' => 'Nami Demo',
           'slogan' => ''
         );
         foreach ($configuration as $name => $value) {
