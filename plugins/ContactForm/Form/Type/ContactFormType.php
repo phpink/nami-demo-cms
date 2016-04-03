@@ -47,23 +47,23 @@ class ContactFormType extends AbstractType
     {
         $builder->add('subject', 'text', array(
             'attr' => array(
-                'placeholder' => 'Sujet du message'
+                'placeholder' => 'Subject'
             )
         ));
         $builder->add('name', 'text', array(
             'attr' => array(
-                'placeholder' => 'Votre nom',
+                'placeholder' => 'Your name',
                 'pattern'     => '.{2,}' //minlength
             )
         ));
         $builder->add('email', 'email', array(
             'attr' => array(
-                'placeholder' => 'Votre adresse email'
+                'placeholder' => 'Your email'
             )
         ));
         $builder->add('company', 'text', array(
             'attr' => array(
-                'placeholder' => 'Votre société'
+                'placeholder' => 'Your company'
             ),
             'required' => false
         ));
@@ -73,16 +73,17 @@ class ContactFormType extends AbstractType
             ),
             array_merge($this->options, array(
                 'invalid_message' => $this->translator->trans(
-                    'Le filtre antispam est incorrect.'
+                    'Antispam value is incorrect.'
                 )
             ))
         );
         $builder->add('message', 'textarea', array(
             'attr' => array(
-                'placeholder' => 'Votre message',
+                'placeholder' => 'Your message',
                 'class' => 'textarea'
             )
         ));
+        $builder->add('submit', 'submit');
     }
 
     /**

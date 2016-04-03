@@ -34,7 +34,7 @@ class BlockPlugin extends NamiPluginBlock
         $this->output = $this->controller->renderView(
             $container->getParameter('namiplugin.contactform.block_template'),
             array(
-                'form' => $this->getForm()->createView(),
+                'form' => $this->getForm($container)->createView(),
                 'mailSent' => $this->mailSent
             )
         );
@@ -45,7 +45,7 @@ class BlockPlugin extends NamiPluginBlock
      * Build the contact form
      * @return \Symfony\Component\Form\Form
      */
-    private function getForm()
+    private function getForm(Container $container)
     {
         $form = $this->controller->createForm(
             new ContactFormType(
@@ -60,7 +60,7 @@ class BlockPlugin extends NamiPluginBlock
 
             // If the submitted data is valid
             if ($form->isValid()) {
-                $this->sendMail($form);
+                $this->sendMail($container, $form);
             }
         }
         return $form;
@@ -70,19 +70,19 @@ class BlockPlugin extends NamiPluginBlock
      * Send the contact mail when form has been validated
      * @param FormInterface $form
      */
-    private function sendMail($form)
+    private function sendMail(Container $container, $form)
     {
         $message = \Swift_Message::newInstance()
             ->setSubject($form->get('subject')->getData())
             ->setFrom($form->get('email')->getData())
             ->setTo(
-                $this->getParameter('namiplugin.contactform.mail_to')
+                $container->getParameter('namiplugin.contactform.mail_to')
             )
             ->setBody(
                 $this->controller->renderView(
-                    $this->getParameter('namiplugin.contactform.mail_template'),
+                    $container->getParameter('namiplugin.contactform.mail_template'),
                     array(
-                        'host' => $this->getParameter('host'),
+                        'host' => $container->getParameter('host'),
                         'ip' => $this->request->getClientIp(),
                         'browser' => $this->request->headers->get('user-agent'),
                         'subject' => $form->get('subject')->getData(),
