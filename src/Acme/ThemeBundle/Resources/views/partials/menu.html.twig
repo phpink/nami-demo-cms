@@ -16,19 +16,26 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 {% for category in menu %}
-                    <li{% if (app.request.attributes.get('_route') == 'nami_front_page' and app.request.attributes.get('slug') == category.getSlug()) or (category.hasPages()) %}
-                        class="{% if app.request.attributes.get('_route') == 'nami_front_page' and app.request.attributes.get('slug') == category.getSlug() %}active {% endif %}{% if category.hasPages() %}dropdown{% endif %}"
+                    {% set isCurrentCategory = (app.request.attributes.get('_route') == 'nami_front_page') and (app.request.attributes.get('slug') == category.getSlug()) %}
+                    <li{% if isCurrentCategory or category.hasPages() %}
+                        class="{% if isCurrentCategory %}active {% endif %}{% if category.hasPages() %}dropdown{% endif %}"
                             {% endif %}>
                         <a href="{{ path('nami_front_page', { 'slug': category.getSlug() }) }}" title="{{ category.getTitle() }}"{% if category.hasPages() %} class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"{% endif %}>{{ category.getName() }}{% if category.hasPages() %} <span class="caret"></span></a>{% endif %}</a>
                         {% if category.hasPages() %}
                             <ul class="dropdown-menu">
                                 {% for page in category.getPages() %}
-                                    <li{% if app.request.attributes.get('_route') == 'nami_front_page' and app.request.attributes.get('slug') == page.getSlug() %} class="active"{% endif %}><a href="{{ path('nami_front_page', { 'slug': page.getSlug() }) }}" title="{{ page.getHeader() }}">{{ page.getTitle() }}</a></li>
+                                    {% set isCurrentPage = (app.request.attributes.get('_route') == 'nami_front_page' and app.request.attributes.get('slug') == page.getSlug()) %}
+                                    <li{% if isCurrentPage %} class="active"{% endif %}><a href="{{ path('nami_front_page', { 'slug': page.getSlug() }) }}" title="{{ page.getHeader() }}">{{ page.getTitle() }}</a></li>
                                 {% endfor %}
                             </ul>
                         {% endif %}
                     </li>
                 {% endfor %}
+
+                <li{% if app.request.attributes.get('_route') == 'nami_front_page' and app.request.attributes.get('slug') == 'contact' %}
+                    class="active"{% endif %}>
+                    <a href="{{ path('nami_front_page', { 'slug': 'contact' }) }}" title="Contact us">Contact</a>
+                </li>
 
 
                 {% for page in pages %}

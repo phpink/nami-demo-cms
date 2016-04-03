@@ -4,7 +4,10 @@
     "type": "project",
     "description": "The \"Symfony Standard Edition\" distribution",
     "autoload": {
-        "psr-4": { "": "src/" },
+        "psr-4": {
+            "": "src/",
+            "NamiPlugin\\": "plugins/"
+        },
         "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
     },
     "require": {
@@ -37,13 +40,8 @@
         ]
     },
     "config": {
-        "bin-dir": "bin",
-        "platform": {
-            "php": "5.3.9"
-        }
+        "bin-dir": "bin"
     },
-    "minimum-stability": "dev",
-    "prefer-stable": false,
     "extra": {
         "symfony-app-dir": "app",
         "symfony-web-dir": "web",
@@ -53,7 +51,7 @@
             "file": "app/config/parameters.yml"
         },
         "branch-alias": {
-            "dev-master": "2.8-dev"
+            "dev-master": "0.1-dev"
         }
     }
 }

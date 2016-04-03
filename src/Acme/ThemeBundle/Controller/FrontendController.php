@@ -2,12 +2,12 @@
 
 namespace Acme\ThemeBundle\Controller;
 
-use PhpInk\Nami\CoreBundle\Controller\FrontendController;
+use PhpInk\Nami\CoreBundle\Controller\FrontendController as BaseFrontendController;
 use Symfony\Component\HttpFoundation\JsonResponse;
 
-class DefaultController extends FrontendController
+class FrontendController extends BaseFrontendController
 {
-    public function newAction()
+    public function testAction()
     {
         return new JsonResponse(array(
            'new' => true
