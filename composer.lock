@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a44f03ab0ba84a497d11bb77522b39da",
-    "content-hash": "cc307682b2d19acbf377c498077ea89b",
+    "hash": "26e52086e57d4bb92b248320765b715d",
+    "content-hash": "82bbfd66a108a1e7b356b8cfdb659ac3",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -333,12 +333,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/dbal.git",
-                "reference": "61e1f860a304c3fb6961ecbec36927b5f20b71c6"
+                "reference": "3df22ccdf20a68fafe34cb1ae452aee7cde7d442"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/dbal/zipball/61e1f860a304c3fb6961ecbec36927b5f20b71c6",
-                "reference": "61e1f860a304c3fb6961ecbec36927b5f20b71c6",
+                "url": "https://api.github.com/repos/doctrine/dbal/zipball/3df22ccdf20a68fafe34cb1ae452aee7cde7d442",
+                "reference": "3df22ccdf20a68fafe34cb1ae452aee7cde7d442",
                 "shasum": ""
             },
             "require": {
@@ -396,7 +396,7 @@
                 "persistence",
                 "queryobject"
             ],
-            "time": "2016-02-19 14:48:59"
+            "time": "2016-04-03 03:13:05"
         },
         {
             "name": "doctrine/doctrine-bundle",
@@ -1975,12 +1975,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/lexik/LexikJWTAuthenticationBundle.git",
-                "reference": "940528b00703d416a2945c670e4f1fdc700a7ae2"
+                "reference": "7c049a6cf19c40483a809bd4a1fab475f1f22c50"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lexik/LexikJWTAuthenticationBundle/zipball/940528b00703d416a2945c670e4f1fdc700a7ae2",
-                "reference": "940528b00703d416a2945c670e4f1fdc700a7ae2",
+                "url": "https://api.github.com/repos/lexik/LexikJWTAuthenticationBundle/zipball/7c049a6cf19c40483a809bd4a1fab475f1f22c50",
+                "reference": "7c049a6cf19c40483a809bd4a1fab475f1f22c50",
                 "shasum": ""
             },
             "require": {
@@ -2041,7 +2041,7 @@
                 "rest",
                 "symfony"
             ],
-            "time": "2016-03-24 08:02:34"
+            "time": "2016-04-02 09:55:37"
         },
         {
             "name": "liip/imagine-bundle",
@@ -2174,12 +2174,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/Seldaek/monolog.git",
-                "reference": "15e21f38aa9c2119e818c2053dfbd3becce3bc07"
+                "reference": "064b38c16790249488e7a8b987acf1c9d7383c09"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/15e21f38aa9c2119e818c2053dfbd3becce3bc07",
-                "reference": "15e21f38aa9c2119e818c2053dfbd3becce3bc07",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/064b38c16790249488e7a8b987acf1c9d7383c09",
+                "reference": "064b38c16790249488e7a8b987acf1c9d7383c09",
                 "shasum": ""
             },
             "require": {
@@ -2244,7 +2244,7 @@
                 "logging",
                 "psr-3"
             ],
-            "time": "2016-04-01 10:36:28"
+            "time": "2016-04-02 13:12:58"
         },
         {
             "name": "namshi/jose",
@@ -2396,12 +2396,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "c7e26a21ba357863de030f0b9e701c7d04593774"
+                "reference": "1115ffa06bad72d01735d91f51eb022db556e205"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/c7e26a21ba357863de030f0b9e701c7d04593774",
-                "reference": "c7e26a21ba357863de030f0b9e701c7d04593774",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/1115ffa06bad72d01735d91f51eb022db556e205",
+                "reference": "1115ffa06bad72d01735d91f51eb022db556e205",
                 "shasum": ""
             },
             "require": {
@@ -2436,7 +2436,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2016-03-18 20:34:03"
+            "time": "2016-04-03 05:47:09"
         },
         {
             "name": "phpcollection/phpcollection",
@@ -2537,12 +2537,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpink/nami-core-bundle.git",
-                "reference": "ed9299e69acce7aa6656edf51d965c99eae0500d"
+                "reference": "bd572ca9d3557ce364cc5b88e35a26a94b719be5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpink/nami-core-bundle/zipball/ed9299e69acce7aa6656edf51d965c99eae0500d",
-                "reference": "ed9299e69acce7aa6656edf51d965c99eae0500d",
+                "url": "https://api.github.com/repos/phpink/nami-core-bundle/zipball/bd572ca9d3557ce364cc5b88e35a26a94b719be5",
+                "reference": "bd572ca9d3557ce364cc5b88e35a26a94b719be5",
                 "shasum": ""
             },
             "require": {
@@ -2605,7 +2605,7 @@
                 "cms",
                 "rest"
             ],
-            "time": "2016-04-02 07:55:34"
+            "time": "2016-04-03 09:55:17"
         },
         {
             "name": "phpoption/phpoption",
@@ -4393,12 +4393,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "909b21d89a12c449b4362b19f69e1cc532cc6d82"
+                "reference": "ee7a4e425a773d4f6a201a2ce1cc2216d8fbd3d4"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/909b21d89a12c449b4362b19f69e1cc532cc6d82",
-                "reference": "909b21d89a12c449b4362b19f69e1cc532cc6d82",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/ee7a4e425a773d4f6a201a2ce1cc2216d8fbd3d4",
+                "reference": "ee7a4e425a773d4f6a201a2ce1cc2216d8fbd3d4",
                 "shasum": ""
             },
             "require": {
@@ -4457,7 +4457,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-04-02 06:40:57"
+            "time": "2016-04-03 05:55:37"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -5005,8 +5005,5 @@
     "platform": {
         "php": ">=5.3.9"
     },
-    "platform-dev": [],
-    "platform-overrides": {
-        "php": "5.3.9"
-    }
+    "platform-dev": []
 }
