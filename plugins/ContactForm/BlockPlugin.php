@@ -1,5 +1,6 @@
 <?php namespace NamiPlugin\ContactForm;
 
+use Symfony\Component\DependencyInjection\Container;
 use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\Form\FormInterface;
 use PhpInk\Nami\CoreBundle\Plugin\Block as NamiPluginBlock;
@@ -22,7 +23,7 @@ class BlockPlugin extends NamiPluginBlock
      * Plugin main block processing
      * @return NamiPluginBlock
      */
-    public function process()
+    public function process(Container $container)
     {
         $session = $this->request->getSession();
         if (!$session) {
@@ -31,7 +32,7 @@ class BlockPlugin extends NamiPluginBlock
             $this->request->setSession($session);
         }
         $this->output = $this->controller->renderView(
-            $this->getParameter('namiplugin.contactform.block_template'),
+            $container->getParameter('namiplugin.contactform.block_template'),
             array(
                 'form' => $this->getForm()->createView(),
                 'mailSent' => $this->mailSent
