@@ -1,6 +1,7 @@
 .idea/*
 /vendor/
-/web/bundles
+/web/bundles/
+/web/media/cache/*
 /app/cache/
 /app/logs/
 .gitkeep

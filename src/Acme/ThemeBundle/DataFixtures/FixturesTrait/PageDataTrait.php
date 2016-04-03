@@ -109,7 +109,7 @@ trait PageDataTrait
                         )
                     ),
                     array(
-                        'title' => null,
+                        'title' => 'Customizable with theme & plugins',
                         'content' => '<section>
                               <p>Innovation, high-end, Symfony stack.</p>
                               <p>Improve your content administration.</p>
@@ -135,7 +135,13 @@ trait PageDataTrait
                     array(
                         'title' => 'News 1',
                         'content' => '<p>Nami is in dev mode.</p>',
-                        'template' => 'front'
+                        'template' => 'default',
+                        'images' => array(
+                            array(
+                                'name' => "App development",
+                                'url' => 'vector-mobile-app-development.jpg'
+                            )
+                        )
                     ),
                 )
 
@@ -155,7 +161,13 @@ trait PageDataTrait
                     array(
                         'title' => 'News 2',
                         'content' => '<p>Nami is in beta mode.</p>',
-                        'template' => 'front'
+                        'template' => 'default',
+                        'images' => array(
+                            array(
+                                'name' => "Rocket ride",
+                                'url' => 'rocket_ride.jpg'
+                            )
+                        )
                     ),
                 )
 
@@ -174,7 +186,7 @@ trait PageDataTrait
                 'negativeText' => false,
                 'blocks' => array(
                     array(
-                        'title' => '',
+                        'title' => 'Write a message to us',
                         'content' => '',
                         'type' => 'ContactForm',
                         'template' => 'contact',
