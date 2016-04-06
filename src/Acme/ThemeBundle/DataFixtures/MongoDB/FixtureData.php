@@ -5,7 +5,7 @@ namespace Acme\ThemeBundle\DataFixtures\ORM;
 use Symfony\Component\DependencyInjection\ContainerAwareInterface;
 use Doctrine\Common\DataFixtures\AbstractFixture;
 use Doctrine\Common\Persistence\ObjectManager;
-use PhpInk\Nami\CoreBundle\Model\Orm as Model;
+use PhpInk\Nami\CoreBundle\Model\Odm as Model;
 use Acme\ThemeBundle\DataFixtures\FixturesTrait;
 
 class FixtureData extends AbstractFixture implements ContainerAwareInterface

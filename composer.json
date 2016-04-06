@@ -12,6 +12,7 @@
     },
     "require": {
         "php": ">=5.3.9",
+        "doctrine/orm": "^2.4.8",
         "phpink/nami-core-bundle": "*",
         "phpink/nami-admin-bundle": "*"
     },

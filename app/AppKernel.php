@@ -42,6 +42,7 @@ class AppKernel extends Kernel
             /**
              * Front, Back bundles
              */
+            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
             new PhpInk\Nami\CoreBundle\NamiCoreBundle(),
             new PhpInk\Nami\AdminBundle\NamiAdminBundle(),
