@@ -10,7 +10,7 @@ class AppKernel extends Kernel
         $bundles = array(
 
             /**
-             * Shared bundles [Back & Front]
+             * Base bundles
              */
             new Symfony\Bundle\FrameworkBundle\FrameworkBundle(),
             new Symfony\Bundle\SecurityBundle\SecurityBundle(),
@@ -18,15 +18,20 @@ class AppKernel extends Kernel
             new Symfony\Bundle\MonologBundle\MonologBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new FOS\HttpCacheBundle\FOSHttpCacheBundle(),
+            new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
+            new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
 
             /**
-             * Core bundles
+             * Doctrine bundles (ORM storage)
              */
-            new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
+            //
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
+
+            // Add your extra storage here
             //new Doctrine\Bundle\MongoDBBundle\DoctrineMongoDBBundle(),
+            //new Doctrine\Bundle\PHPCRBundle\DoctrinePHPCRBundle(),
+
             new Stof\DoctrineExtensionsBundle\StofDoctrineExtensionsBundle(),
-            new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new JMS\SerializerBundle\JMSSerializerBundle(),
 
             /**
@@ -40,12 +45,28 @@ class AppKernel extends Kernel
             new Gfreeau\Bundle\GetJWTBundle\GfreeauGetJWTBundle(),
 
             /**
+             * Sonata admin (ORM storage)
+             */
+            new Sonata\CoreBundle\SonataCoreBundle(),
+            new Sonata\BlockBundle\SonataBlockBundle(),
+            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
+            //...
+
+            // Sonata admin storage bundle
+            new Sonata\DoctrineORMAdminBundle\SonataDoctrineORMAdminBundle(),
+
+            // This example uses SonataDoctrineORMAdmin but it works the same with the alternatives
+            //new Sonata\DoctrineMongoDBAdminBundle\SonataDoctrineMongoDBAdminBundle(),
+            //new Sonata\DoctrinePHPCRAdminBundle\SonataDoctrinePHPCRAdminBundle(),
+
+            // Then add SonataAdminBundle
+            new Sonata\AdminBundle\SonataAdminBundle(),
+
+            /**
              * Front, Back bundles
              */
-            new Knp\Bundle\MenuBundle\KnpMenuBundle(),
             new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
             new PhpInk\Nami\CoreBundle\NamiCoreBundle(),
-            new PhpInk\Nami\AdminBundle\NamiAdminBundle(),
             new Acme\ThemeBundle\AcmeThemeBundle()
         );
 

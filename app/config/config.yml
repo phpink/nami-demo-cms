@@ -6,11 +6,13 @@ framework:
     router:
         resource: "%kernel.root_dir%/config/routing.yml"
         strict_requirements: %kernel.debug%
+    session:
+        save_path: ~
 
 assetic:
     debug:          %kernel.debug%
     use_controller: false
-    bundles:        [NamiCoreBundle, NamiAdminBundle, AcmeThemeBundle]
+    bundles:        [NamiCoreBundle, AcmeThemeBundle]
     #java: /usr/bin/java
     filters:
         cssrewrite: ~
