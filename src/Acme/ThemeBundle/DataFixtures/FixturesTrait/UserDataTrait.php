@@ -76,7 +76,7 @@ trait UserDataTrait
                 'lastName' => 'Doe',
                 'male' => true,
                 'avatar' => 'relief.png',
-                'roles' => array('ROLE_ADMIN'),
+                'roles' => array('ROLE_ADMIN', 'ROLE_SONATA_ADMIN'),
                 'email' => 'johndoe@host.ltd',
                 'phone' => '+33123456789'
             )

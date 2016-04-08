@@ -12,7 +12,7 @@ nami_api_doc:
   resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
   prefix:   /api-doc
 
-admin:
+nami_admin:
     resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'
     prefix: /admin
 

@@ -70,7 +70,6 @@ class AppKernel extends Kernel
             /**
              * Front, Back bundles
              */
-            new FOS\JsRoutingBundle\FOSJsRoutingBundle(),
             new PhpInk\Nami\CoreBundle\NamiCoreBundle(),
             new Acme\ThemeBundle\AcmeThemeBundle()
         );

@@ -1,8 +1,8 @@
 {
-    "name": "symfony/framework-standard-edition",
+    "name": "nami/nami-demo-cms",
     "license": "MIT",
     "type": "project",
-    "description": "The \"Symfony Standard Edition\" distribution",
+    "description": "Nami CMS demo application",
     "autoload": {
         "psr-4": {
             "NamiPlugin\\": "plugins/",
@@ -13,9 +13,8 @@
     "require": {
         "php": ">=5.3.9",
         "doctrine/orm": "^2.4.8",
-        "phpink/nami-core-bundle": "*",
-        "sonata-project/doctrine-orm-admin-bundle": "^2.3",
-        "sonata-project/formatter-bundle": "^2.3"
+        "phpink/nami-core-bundle": "dev-features-sonata",
+        "sonata-project/doctrine-orm-admin-bundle": "^2.3"
     },
     "require-dev": {
         "sensio/generator-bundle": "~3.0",
@@ -23,6 +22,12 @@
         "phpunit/phpunit": "^4.8",
         "doctrine/doctrine-fixtures-bundle": "2.2.x-dev"
     },
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/phpink/nami-core-bundle"
+        }
+    ],
     "scripts": {
         "post-install-cmd": [
             "Incenteev\\ParameterHandler\\ScriptHandler::buildParameters",

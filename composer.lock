@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "8b5688c7e0e6edd305164b596c022df1",
-    "content-hash": "44a5b3a140e8dcf37f21d5bfecd2fe13",
+    "hash": "a5a7b50793282af376fd6d8aa2ee123e",
+    "content-hash": "3f765c99339bd427cdc4b336d7de5c3e",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -2272,12 +2272,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/lexik/LexikJWTAuthenticationBundle.git",
-                "reference": "7c049a6cf19c40483a809bd4a1fab475f1f22c50"
+                "reference": "49f53fa01e605005499d5188fbbf1c20f486f185"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/lexik/LexikJWTAuthenticationBundle/zipball/49f53fa01e605005499d5188fbbf1c20f486f185",
-                "reference": "7c049a6cf19c40483a809bd4a1fab475f1f22c50",
+                "reference": "49f53fa01e605005499d5188fbbf1c20f486f185",
                 "shasum": ""
             },
             "require": {
@@ -2338,7 +2338,7 @@
                 "rest",
                 "symfony"
             ],
-            "time": "2016-04-02 09:55:37"
+            "time": "2016-04-07 07:18:35"
         },
         {
             "name": "liip/imagine-bundle",
@@ -2785,22 +2785,15 @@
         },
         {
             "name": "phpink/nami-core-bundle",
-            "version": "dev-master",
+            "version": "dev-features-sonata",
             "source": {
                 "type": "git",
-                "url": "https://github.com/phpink/nami-core-bundle.git",
-                "reference": "bd572ca9d3557ce364cc5b88e35a26a94b719be5"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phpink/nami-core-bundle/zipball/fefdac6d4a4ab122a9b194c7590d0b1c30cb8b72",
-                "reference": "bd572ca9d3557ce364cc5b88e35a26a94b719be5",
-                "shasum": ""
+                "url": "https://github.com/phpink/nami-core-bundle",
+                "reference": "a9b71ca49b6141e903bff2f453b7880694d06045"
             },
             "require": {
                 "doctrine/doctrine-bundle": "~1.4",
                 "doctrine/mongodb-odm": "1.0.*@dev",
-                "doctrine/orm": "^2.4.8",
                 "friendsofsymfony/http-cache-bundle": "^1.0",
                 "friendsofsymfony/rest-bundle": "^1.0",
                 "gfreeau/get-jwt-bundle": "2.0.*@dev",
@@ -2812,6 +2805,8 @@
                 "php": ">=5.4.0",
                 "sensio/distribution-bundle": "~4.0",
                 "sensio/framework-extra-bundle": "^3.0.2",
+                "sonata-project/admin-bundle": "^2.3",
+                "sonata-project/formatter-bundle": "^2.3",
                 "stof/doctrine-extensions-bundle": "1.2.*@dev",
                 "symfony/assetic-bundle": "~2.3",
                 "symfony/monolog-bundle": "~2.4",
@@ -2821,8 +2816,14 @@
                 "willdurand/hateoas-bundle": "^1.0"
             },
             "require-dev": {
+                "doctrine/mongodb-odm": "1.0.*@dev",
+                "doctrine/mongodb-odm-bundle": "3.0.*@dev",
+                "doctrine/orm": "^2.4.8",
+                "doctrine/phpcr-bundle": "1.0.*@dev",
                 "liip/functional-test-bundle": "1.4.x",
                 "sensio/generator-bundle": "~2.3",
+                "sonata-project/doctrine-mongodb-admin-bundle": "2.0.*@dev",
+                "sonata-project/doctrine-phpcr-admin-bundle": "2.0.*@dev",
                 "symfony/phpunit-bridge": "2.7.*"
             },
             "suggest": {
@@ -2839,7 +2840,6 @@
                     "PhpInk\\Nami\\CoreBundle\\": ""
                 }
             },
-            "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
             ],
@@ -2852,12 +2852,12 @@
             "description": "Nami CMS - CORE Bundle",
             "homepage": "http://nami.php.ink",
             "keywords": [
+                "API",
+                "CMS",
                 "Nami",
-                "api",
-                "cms",
-                "rest"
+                "REST"
             ],
-            "time": "2016-04-03 09:55:17"
+            "time": "2016-04-07 19:12:14"
         },
         {
             "name": "phpoption/phpoption",
@@ -2915,12 +2915,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "6bfbfdbf7e0d12a0aa327bb067bf89153316ab1a"
+                "reference": "8f614a053810e8dfac4f2aad6af59a7b369cfd8e"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/8f614a053810e8dfac4f2aad6af59a7b369cfd8e",
-                "reference": "6bfbfdbf7e0d12a0aa327bb067bf89153316ab1a",
+                "reference": "8f614a053810e8dfac4f2aad6af59a7b369cfd8e",
                 "shasum": ""
             },
             "require": {
@@ -2996,7 +2996,7 @@
                 "x.509",
                 "x509"
             ],
-            "time": "2016-03-19 17:23:04"
+            "time": "2016-04-04 02:35:33"
         },
         {
             "name": "psr/log",
@@ -4231,12 +4231,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "eb23f056f064740360e0d012a3f156c999b9c11d"
+                "reference": "283875b325116a189a9679646ace113facb6ec24"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/symfony/zipball/283875b325116a189a9679646ace113facb6ec24",
-                "reference": "eb23f056f064740360e0d012a3f156c999b9c11d",
+                "reference": "283875b325116a189a9679646ace113facb6ec24",
                 "shasum": ""
             },
             "require": {
@@ -4350,7 +4350,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2016-04-02 07:48:01"
+            "time": "2016-04-07 15:12:31"
         },
         {
             "name": "twig/extensions",
@@ -4782,65 +4782,6 @@
             "time": "2015-11-04 21:23:23"
         },
         {
-            "name": "friendsofsymfony/jsrouting-bundle",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/FriendsOfSymfony/FOSJsRoutingBundle.git",
-                "reference": "25d0117093a845dee96d1dc439656cbf3714ea09"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSJsRoutingBundle/zipball/25d0117093a845dee96d1dc439656cbf3714ea09",
-                "reference": "25d0117093a845dee96d1dc439656cbf3714ea09",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=5.3.2",
-                "symfony/console": "~2.3||~3.0",
-                "symfony/framework-bundle": "~2.3||~3.0",
-                "symfony/serializer": "~2.0||~3.0",
-                "willdurand/jsonp-callback-validator": "~1.0"
-            },
-            "require-dev": {
-                "symfony/expression-language": "~2.4||~3.0",
-                "symfony/phpunit-bridge": "~2.7||~3.0"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "2.0-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "FOS\\JsRoutingBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "FriendsOfSymfony Community",
-                    "homepage": "https://github.com/friendsofsymfony/FOSJsRoutingBundle/contributors"
-                },
-                {
-                    "name": "William Durand",
-                    "email": "will+git@drnd.me"
-                }
-            ],
-            "description": "A pretty nice way to expose your Symfony2 routing to client applications.",
-            "homepage": "http://friendsofsymfony.github.com",
-            "keywords": [
-                "Js Routing",
-                "javascript",
-                "routing"
-            ],
-            "time": "2016-02-06 17:33:24"
-        },
-        {
             "name": "phpdocumentor/reflection-docblock",
             "version": "2.0.4",
             "source": {
@@ -4888,51 +4829,6 @@
                 }
             ],
             "time": "2015-02-03 12:10:50"
-        },
-        {
-            "name": "phpink/nami-admin-bundle",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/phpink/nami-admin-bundle.git",
-                "reference": "7fec189235d5b9781e4b5b4f79ceed16990d5363"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/phpink/nami-admin-bundle/zipball/7fec189235d5b9781e4b5b4f79ceed16990d5363",
-                "reference": "7fec189235d5b9781e4b5b4f79ceed16990d5363",
-                "shasum": ""
-            },
-            "require": {
-                "friendsofsymfony/jsrouting-bundle": "*",
-                "php": ">=5.4.0",
-                "phpink/nami-core-bundle": "*"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "0.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "PhpInk\\Nami\\AdminBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "description": "Nami CMS - Admin back-office bundle",
-            "homepage": "http://nami.php.ink",
-            "keywords": [
-                "Nami",
-                "admin",
-                "angular",
-                "back-office",
-                "cms"
-            ],
-            "time": "2016-03-20 03:29:31"
         },
         {
             "name": "phpspec/prophecy",
@@ -5242,12 +5138,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/sebastianbergmann/phpunit.git",
-                "reference": "ee7a4e425a773d4f6a201a2ce1cc2216d8fbd3d4"
+                "reference": "f9733ae34271bec6a6a6a1d4e9a8dd28f2ac1628"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/f9733ae34271bec6a6a6a1d4e9a8dd28f2ac1628",
-                "reference": "ee7a4e425a773d4f6a201a2ce1cc2216d8fbd3d4",
+                "reference": "f9733ae34271bec6a6a6a1d4e9a8dd28f2ac1628",
                 "shasum": ""
             },
             "require": {
@@ -5306,7 +5202,7 @@
                 "testing",
                 "xunit"
             ],
-            "time": "2016-04-03 05:55:37"
+            "time": "2016-04-07 07:09:31"
         },
         {
             "name": "phpunit/phpunit-mock-objects",
@@ -5794,12 +5690,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/phpunit-bridge.git",
-                "reference": "a967db6a4cd5d276cf849d01b29dba559e149978"
+                "reference": "9d30940765450ccc58bc39f4bda30cc412101b4b"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/phpunit-bridge/zipball/9d30940765450ccc58bc39f4bda30cc412101b4b",
-                "reference": "a967db6a4cd5d276cf849d01b29dba559e149978",
+                "reference": "9d30940765450ccc58bc39f4bda30cc412101b4b",
                 "shasum": ""
             },
             "require": {
@@ -5841,12 +5737,13 @@
             ],
             "description": "Symfony PHPUnit Bridge",
             "homepage": "https://symfony.com",
-            "time": "2016-03-23 13:45:24"
+            "time": "2016-04-05 16:36:54"
         }
     ],
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "phpink/nami-core-bundle": 20,
         "doctrine/doctrine-fixtures-bundle": 20
     },
     "prefer-stable": false,
