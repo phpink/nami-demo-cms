@@ -11,7 +11,7 @@ use NamiPlugin\ContactForm\Form\Type\ContactFormType;
  *
  * @package NamiPlugin
  */
-class BlockPlugin extends NamiPluginBlock
+class Block extends NamiPluginBlock
 {
     /**
      * View marker when mail is sent
@@ -25,6 +25,8 @@ class BlockPlugin extends NamiPluginBlock
      */
     public function process(Container $container)
     {
+
+        //var_dump($container->getParameter('namiplugin.contactform.mail_to'));
         $session = $this->request->getSession();
         if (!$session) {
             $session = new Session();
