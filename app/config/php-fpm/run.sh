@@ -16,4 +16,5 @@ adduser $DOCKER_USER sudo
 echo "Force color prompt"
 sed -i "/alias l/s/^#//g ;/force_color_prompt=yes/s/^#//g" /home/$DOCKER_USER/.bashrc
 
-/etc/init.d/nginx start
+echo "Launch php fpm"
+php-fpm

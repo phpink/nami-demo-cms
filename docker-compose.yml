@@ -3,29 +3,39 @@
 #######################################
 
 mysql:
-  container_name: mysql
+  container_name: nami-mysql
   image: mysql:5.5
   ports:
     - "3306:3306"
   environment:
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: mysql
 
 redis:
-  container_name: redis
+  container_name: nami-redis
   image: redis:latest
   ports:
     - "6379:6379"
 
 nami:
-  container_name: nginx
+  container_name: nami
+  build: ./app/config/php-fpm/
+  environment:
+      - UID=1000
+      - GID=1000
+  links:
+      - mysql:mysql
+      - redis:redis
+  volumes:
+    - .:/var/www/nami
+
+nami-nginx:
+  container_name: nami-nginx
   build: ./app/config/nginx/
   ports:
       - "80:80"
   environment:
       VIRTUAL_HOST: nami.dev
   links:
-      - mysql:mysql.dev
-      - redis:redis.dev
-  volumes:
-    - ./app/config/nginx/nginx.conf:/etc/nginx/nginx.conf
-    - .:/var/www
+      - nami
+  volumes_from:
+      - nami
