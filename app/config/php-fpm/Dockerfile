@@ -48,7 +48,7 @@ RUN curl -sS https://getcomposer.org/installer | php \
     && mv composer.phar /usr/local/bin/composer
 
 # xdebug
- RUN pecl install xdebug redis
+ RUN pecl install xdebug redis mongo
 
 
 RUN sed -i '/fr_FR.UTF-8 UTF-8/s/^# //g' /etc/locale.gen \
@@ -63,6 +63,8 @@ RUN echo 'date.timezone = Europe/Paris' > /usr/local/etc/php/conf.d/date.ini \
 ADD ./php-fpm.conf /usr/local/etc/php-fpm.conf
 ADD ./php.ini /usr/local/etc/php/
 ADD ./xdebug.ini /usr/local/etc/php/conf.d/
+RUN echo extension=C.so >> /usr/local/etc/php/conf.d/redis.ini
+RUN echo extension=mongo.so >> /usr/local/etc/php/conf.d/mongo.ini
 
 ADD ./run.sh /home/run.sh
 
