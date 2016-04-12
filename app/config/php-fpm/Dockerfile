@@ -63,7 +63,7 @@ RUN echo 'date.timezone = Europe/Paris' > /usr/local/etc/php/conf.d/date.ini \
 ADD ./php-fpm.conf /usr/local/etc/php-fpm.conf
 ADD ./php.ini /usr/local/etc/php/
 ADD ./xdebug.ini /usr/local/etc/php/conf.d/
-RUN echo extension=C.so >> /usr/local/etc/php/conf.d/redis.ini
+RUN echo extension=redis.so >> /usr/local/etc/php/conf.d/redis.ini
 RUN echo extension=mongo.so >> /usr/local/etc/php/conf.d/mongo.ini
 
 ADD ./run.sh /home/run.sh
