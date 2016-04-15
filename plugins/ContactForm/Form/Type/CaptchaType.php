@@ -61,7 +61,7 @@ class CaptchaType extends AbstractType
             $options['invalid_message']
         );
         $builder->addEventListener(
-            FormEvents::POST_BIND,
+            FormEvents::POST_SUBMIT,
             array($validator, 'validate')
         );
 

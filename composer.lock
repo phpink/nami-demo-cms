@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "a5a7b50793282af376fd6d8aa2ee123e",
-    "content-hash": "3f765c99339bd427cdc4b336d7de5c3e",
+    "hash": "401131f44240d83a8f1c3acccf0210cd",
+    "content-hash": "2b45e5f017e0b5f4024ee034c114ceb0",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -971,7 +971,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/c1943624ab1260c629316bab104dc5130c060154",
+                "url": "https://api.github.com/repos/doctrine/doctrine2/zipball/76a5229faccf936bd7c393a3fcafc162e107f65c",
                 "reference": "c1943624ab1260c629316bab104dc5130c060154",
                 "shasum": ""
             },
@@ -2276,7 +2276,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/lexik/LexikJWTAuthenticationBundle/zipball/49f53fa01e605005499d5188fbbf1c20f486f185",
+                "url": "https://api.github.com/repos/lexik/LexikJWTAuthenticationBundle/zipball/3631b6284fc3c3a06f8c3c429736ca4910c64371",
                 "reference": "49f53fa01e605005499d5188fbbf1c20f486f185",
                 "shasum": ""
             },
@@ -2339,6 +2339,81 @@
                 "symfony"
             ],
             "time": "2016-04-07 07:18:35"
+        },
+        {
+            "name": "liip/functional-test-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/liip/LiipFunctionalTestBundle.git",
+                "reference": "23a229daa3a4880a6fd659a24d64639427ed1e7d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/liip/LiipFunctionalTestBundle/zipball/23a229daa3a4880a6fd659a24d64639427ed1e7d",
+                "reference": "23a229daa3a4880a6fd659a24d64639427ed1e7d",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "~2.0",
+                "php": "^5.3.9|^7.0",
+                "symfony/browser-kit": "~2.3|~3.0",
+                "symfony/framework-bundle": "2.3.*|~2.7|~3.0"
+            },
+            "require-dev": {
+                "brianium/paratest": "~0.12.0|~0.13.2",
+                "doctrine/doctrine-fixtures-bundle": "~2.3",
+                "doctrine/orm": "^2.4.8",
+                "doctrine/phpcr-bundle": "~1.3",
+                "doctrine/phpcr-odm": "~1.3",
+                "hautelook/alice-bundle": "~0.2|~1.2",
+                "jackalope/jackalope-doctrine-dbal": "1.1.*|1.2.*",
+                "nelmio/alice": "~1.7|~2.0",
+                "phpunit/phpunit": "4.8.*|~5.2",
+                "symfony/assetic-bundle": "~2.3",
+                "symfony/monolog-bundle": "~2.4",
+                "symfony/symfony": "~2.3.1|~2.7|~3.0",
+                "twig/twig": "~1.12"
+            },
+            "suggest": {
+                "brianium/paratest": "Required when using paratest to parallelize tests",
+                "doctrine/dbal": "Required when using the fixture loading functionality with an ORM and SQLite",
+                "doctrine/doctrine-fixtures-bundle": "Required when using the fixture loading functionality",
+                "doctrine/orm": "Required when using the fixture loading functionality with an ORM and SQLite",
+                "hautelook/alice-bundle": "Required when using loadFixtureFiles functionality with custom providers",
+                "nelmio/alice": "Required when using loadFixtureFiles functionality",
+                "symfony/framework-bundle": "To use assertStatusCode and assertValidationErrors ~2.5"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.6.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Liip\\FunctionalTestBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Liip AG",
+                    "homepage": "http://www.liip.ch/"
+                },
+                {
+                    "name": "Community contributions",
+                    "homepage": "https://github.com/liip/LiipFunctionalTestBundle/contributors"
+                }
+            ],
+            "description": "This bundles provides additional functional test-cases for Symfony2 applications",
+            "keywords": [
+                "Symfony2"
+            ],
+            "time": "2016-04-09 16:28:17"
         },
         {
             "name": "liip/imagine-bundle",
@@ -2475,7 +2550,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/064b38c16790249488e7a8b987acf1c9d7383c09",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/a7ade9d68f41bf6b01cc6121635c87b4420a5b46",
                 "reference": "064b38c16790249488e7a8b987acf1c9d7383c09",
                 "shasum": ""
             },
@@ -2919,7 +2994,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/8f614a053810e8dfac4f2aad6af59a7b369cfd8e",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/b3171cc63f44c715a2b29200d9549d866e94d123",
                 "reference": "8f614a053810e8dfac4f2aad6af59a7b369cfd8e",
                 "shasum": ""
             },
@@ -3221,7 +3296,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/1c6a15f39ea7f41d9bc0a5f712932da0c47be27b",
+                "url": "https://api.github.com/repos/sonata-project/SonataAdminBundle/zipball/4dd33b6d1d22f4bda07eb03ef34a234907877917",
                 "reference": "1c6a15f39ea7f41d9bc0a5f712932da0c47be27b",
                 "shasum": ""
             },
@@ -3312,7 +3387,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataBlockBundle/zipball/dbc70ca3c58a4f4762626c93a83bb42006479b5c",
+                "url": "https://api.github.com/repos/sonata-project/SonataBlockBundle/zipball/1e77cd44350dd2e61eed7f74cc85ce299729a9d2",
                 "reference": "dbc70ca3c58a4f4762626c93a83bb42006479b5c",
                 "shasum": ""
             },
@@ -3380,7 +3455,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/cache/zipball/f2f6be96c270d6a2b1f26fdc1d6edcb586b60691",
+                "url": "https://api.github.com/repos/sonata-project/cache/zipball/e73a44126e8a7e96ed33be9284a9d9fd6fd32112",
                 "reference": "f2f6be96c270d6a2b1f26fdc1d6edcb586b60691",
                 "shasum": ""
             },
@@ -3443,7 +3518,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataCoreBundle/zipball/ee2ff39fb84a8a83554061588e76578eaae0424b",
+                "url": "https://api.github.com/repos/sonata-project/SonataCoreBundle/zipball/145356a484b6c20e5ca808425c53f9fa42734f06",
                 "reference": "ee2ff39fb84a8a83554061588e76578eaae0424b",
                 "shasum": ""
             },
@@ -3512,7 +3587,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sonata-project/SonataDoctrineORMAdminBundle/zipball/e8eb83f7dc5b64113892cbf7367705864c651691",
+                "url": "https://api.github.com/repos/sonata-project/SonataDoctrineORMAdminBundle/zipball/9e79f15e43512b4c809a9029a5c0247e7354a277",
                 "reference": "e8eb83f7dc5b64113892cbf7367705864c651691",
                 "shasum": ""
             },
@@ -4235,7 +4310,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/283875b325116a189a9679646ace113facb6ec24",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/8bf49692b6bf5b34c2109a3caae28171ef55d4f3",
                 "reference": "283875b325116a189a9679646ace113facb6ec24",
                 "shasum": ""
             },
@@ -5142,7 +5217,7 @@
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/f9733ae34271bec6a6a6a1d4e9a8dd28f2ac1628",
+                "url": "https://api.github.com/repos/sebastianbergmann/phpunit/zipball/496745aeba741e63b7149da3e1f712d441751182",
                 "reference": "f9733ae34271bec6a6a6a1d4e9a8dd28f2ac1628",
                 "shasum": ""
             },
@@ -5744,6 +5819,7 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "phpink/nami-core-bundle": 20,
+        "liip/functional-test-bundle": 20,
         "doctrine/doctrine-fixtures-bundle": 20
     },
     "prefer-stable": false,

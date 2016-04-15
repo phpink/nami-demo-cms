@@ -14,7 +14,8 @@
         "php": ">=5.3.9",
         "doctrine/orm": "^2.4.8",
         "phpink/nami-core-bundle": "dev-features-sonata",
-        "sonata-project/doctrine-orm-admin-bundle": "^2.3"
+        "sonata-project/doctrine-orm-admin-bundle": "^2.3",
+        "liip/functional-test-bundle": "1.6.*@dev"
     },
     "require-dev": {
         "sensio/generator-bundle": "~3.0",

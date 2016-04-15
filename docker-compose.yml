@@ -33,6 +33,7 @@ php:
       - redis:redis
   volumes:
     - .:/var/www/nami
+    - /home/geoffroy/Dev/phpink/nami-core-bundle:/var/www/nami-core-bundle
 
 nginx:
   container_name: nginx
