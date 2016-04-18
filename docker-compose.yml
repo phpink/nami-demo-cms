@@ -8,7 +8,13 @@ mysql:
   ports:
     - "3306:3306"
   environment:
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: mysql
+
+mongodb:
+    image: mongo:3.1.8
+    container_name: mongodb
+    ports:
+        - "localhost:27017:27017"
 
 redis:
   container_name: redis
@@ -16,7 +22,19 @@ redis:
   ports:
     - "6379:6379"
 
-nami:
+php:
+  container_name: php
+  build: ./app/config/php-fpm/
+  environment:
+      - UID=1000
+      - GID=1000
+  links:
+      - mysql:mysql
+      - redis:redis
+  volumes:
+    - .:/var/www/nami
+
+nginx:
   container_name: nginx
   build: ./app/config/nginx/
   ports:
@@ -24,8 +42,6 @@ nami:
   environment:
       VIRTUAL_HOST: nami.dev
   links:
-      - mysql:mysql.dev
-      - redis:redis.dev
-  volumes:
-    - ./app/config/nginx/nginx.conf:/etc/nginx/nginx.conf
-    - .:/var/www
+      - php
+  volumes_from:
+      - php

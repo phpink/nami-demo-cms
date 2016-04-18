@@ -2,11 +2,11 @@ parameters:
     host: http://www.nami.com
     secret: l9Y3prfZW2aE34olJVzvdXuUr5k6yyASmB3ShdMhH8k
 
-    nami_core.database_adapter: 'odm'
-    nami_core.database_driver: ""
+    nami_core.database_adapter: orm
+    nami_core.database_driver: pdo_mysql
     nami_core.database_host: localhost
-    nami_core.database_name: ~
-    nami_core.database_port: 27017
+    nami_core.database_name: nami
+    nami_core.database_port: 3306
     nami_core.database_user: ~
     nami_core.database_pass: ~
     nami_core.cache_host: localhost
