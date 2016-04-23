@@ -11,7 +11,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="favicon.png">
 
     {% stylesheets filter="?yui_css"
@@ -42,7 +41,7 @@
         {% endfor %}
     </div>
 
-    {% javascripts filter="?yui_js" output="main.js"
+    {% javascripts filter="?yui_js" output="js/main.js"
         '@AcmeThemeBundle/Resources/js/main.js'
     %}
     <script type="text/javascript" src="{{ asset_url }}"></script>

@@ -11,7 +11,7 @@ use NamiPlugin\ContactForm\Form\Type\ContactFormType;
  *
  * @package NamiPlugin
  */
-class BlockPlugin extends NamiPluginBlock
+class Block extends NamiPluginBlock
 {
     /**
      * View marker when mail is sent

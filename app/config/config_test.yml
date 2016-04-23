@@ -19,7 +19,7 @@ doctrine:
         connections:
             default:
                 driver:   pdo_sqlite
-                path:     %kernel.root_dir%/vendor/phpink/nami-core-bundle/Tests/test.db
+                path:     %kernel.root_dir%/../vendor/phpink/nami-core-bundle/Tests/test.db
                 charset: utf8
 
 liip_functional_test:

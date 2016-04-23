@@ -1,6 +1,8 @@
 .idea/*
 /vendor/
 /web/bundles/
+/web/css/
+/web/js/
 /web/media/cache/*
 /app/cache/
 /app/logs/
