@@ -12,30 +12,24 @@ nami_api_doc:
   resource: "@NelmioApiDocBundle/Resources/config/routing.yml"
   prefix:   /api-doc
 
-#nami_plugins:
-#    resource: "@NamiCoreBundle/Resources/config/routing.yml"
-#    type: namiplugin
-
 nami_admin:
     resource: "@NamiAdminBundle/Resources/config/routing.yml"
     prefix:   /admin
 
 nami_front_homepage:
     path:     /
+    methods:  [GET, POST]
     defaults: { _controller: NamiCoreBundle:Frontend:index }
-    requirements:
-        _method:  GET|POST
 
 nami_front_extra:
     path:     /test
+    methods:  [GET, POST]
     defaults: { _controller: AcmeThemeBundle:Frontend:test }
-    requirements:
-        _method:  GET|POST
 
 nami_front_page:
     path:     /{slug}
+    methods:  [GET, POST]
     defaults: { _controller: NamiCoreBundle:Frontend:index }
     requirements:
-        _method:  GET|POST
         slug: .+
 
