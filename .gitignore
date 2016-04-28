@@ -6,5 +6,7 @@
 /web/media/cache/*
 /app/cache/
 /app/logs/
+/var/cache
+/var/logs/
 .gitkeep
 
