@@ -2502,12 +2502,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpink/nami-core-bundle.git",
-                "reference": "9cc1210928668d604c0ca12a1556f1e59546b10a"
+                "reference": "c269c69029b9563a40b8eb846775a476644c9bbc"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpink/nami-core-bundle/zipball/9cc1210928668d604c0ca12a1556f1e59546b10a",
-                "reference": "9cc1210928668d604c0ca12a1556f1e59546b10a",
+                "url": "https://api.github.com/repos/phpink/nami-core-bundle/zipball/c269c69029b9563a40b8eb846775a476644c9bbc",
+                "reference": "c269c69029b9563a40b8eb846775a476644c9bbc",
                 "shasum": ""
             },
             "require": {
@@ -2528,7 +2528,7 @@
                 "symfony/assetic-bundle": "~2.7",
                 "symfony/monolog-bundle": "^2.8",
                 "symfony/swiftmailer-bundle": "^2.3",
-                "symfony/symfony": "^3.0.4",
+                "symfony/symfony": "3.0.0",
                 "twig/extensions": "1.1.0",
                 "willdurand/hateoas-bundle": "^1.0"
             },
@@ -2575,7 +2575,7 @@
                 "source": "https://github.com/phpink/nami-core-bundle/tree/features-sf3",
                 "issues": "https://github.com/phpink/nami-core-bundle/issues"
             },
-            "time": "2016-04-30 08:51:03"
+            "time": "2016-04-30 12:09:33"
         },
         {
             "name": "phpoption/phpoption",
@@ -3512,16 +3512,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "3.0.x-dev",
+            "version": "v3.0.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "e2180e32c32f37a13c865cf44375e954fdd8a8af"
+                "reference": "eb2a4f5f7a09fc4ce7a74ae883a8cf8a279614f5"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/e2180e32c32f37a13c865cf44375e954fdd8a8af",
-                "reference": "e2180e32c32f37a13c865cf44375e954fdd8a8af",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/eb2a4f5f7a09fc4ce7a74ae883a8cf8a279614f5",
+                "reference": "eb2a4f5f7a09fc4ce7a74ae883a8cf8a279614f5",
                 "shasum": ""
             },
             "require": {
@@ -3591,9 +3591,8 @@
                 "doctrine/orm": "~2.4,>=2.4.5",
                 "egulias/email-validator": "~1.2",
                 "monolog/monolog": "~1.11",
-                "ocramius/proxy-manager": "~0.4|~1.0|~2.0",
+                "ocramius/proxy-manager": "~0.4|~1.0",
                 "phpdocumentor/reflection": "^1.0.7",
-                "symfony/polyfill-apcu": "~1.1",
                 "symfony/security-acl": "~2.8|~3.0"
             },
             "type": "library",
@@ -3638,7 +3637,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2016-04-28 14:42:50"
+            "time": "2015-11-30 20:59:43"
         },
         {
             "name": "twig/extensions",
