@@ -22,12 +22,13 @@
     "require-dev": {
         "sensio/generator-bundle": "^3.0",
         "symfony/phpunit-bridge": "^3.0",
+        "liip/functional-test-bundle": "1.6.x",
         "doctrine/doctrine-fixtures-bundle": "2.3.0"
     },
     "repositories": [
         {
             "type": "vcs",
-            "url": "/home/geoffroy/Dev/phpink/nami-core-bundle"
+            "url": "https://github.com/phpink/ami-core-bundle"
         }
     ],
     "scripts": {

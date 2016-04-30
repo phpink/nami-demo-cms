@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "cd2fe0ca7e1aafd950575b6803c326ac",
-    "content-hash": "f44147212ce7b9862f1375da3b11daa6",
+    "hash": "a4924eeb3b63bd9eee6c53c27acaa559",
+    "content-hash": "bf3803819e3e34233cb6839c2411e011",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -194,12 +194,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/doctrine/collections.git",
-                "reference": "9f89fd349fd2b537be8a0a0c41f87f2f640dfc8a"
+                "reference": "4a9f909f73a2f70be8cd8cdd5b72ce376f21db26"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/doctrine/collections/zipball/9f89fd349fd2b537be8a0a0c41f87f2f640dfc8a",
-                "reference": "9f89fd349fd2b537be8a0a0c41f87f2f640dfc8a",
+                "url": "https://api.github.com/repos/doctrine/collections/zipball/4a9f909f73a2f70be8cd8cdd5b72ce376f21db26",
+                "reference": "4a9f909f73a2f70be8cd8cdd5b72ce376f21db26",
                 "shasum": ""
             },
             "require": {
@@ -252,7 +252,7 @@
                 "collections",
                 "iterator"
             ],
-            "time": "2016-03-31 10:10:15"
+            "time": "2016-04-28 05:33:48"
         },
         {
             "name": "doctrine/common",
@@ -1037,12 +1037,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/FriendsOfSymfony/FOSRestBundle.git",
-                "reference": "df94140dc39bc591b7c2ce7cd9e791594fad7b28"
+                "reference": "a422c7a230f1e88e0e57a70dbe7eb7571b2abf35"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSRestBundle/zipball/df94140dc39bc591b7c2ce7cd9e791594fad7b28",
-                "reference": "df94140dc39bc591b7c2ce7cd9e791594fad7b28",
+                "url": "https://api.github.com/repos/FriendsOfSymfony/FOSRestBundle/zipball/a422c7a230f1e88e0e57a70dbe7eb7571b2abf35",
+                "reference": "a422c7a230f1e88e0e57a70dbe7eb7571b2abf35",
                 "shasum": ""
             },
             "require": {
@@ -1117,7 +1117,7 @@
             "keywords": [
                 "rest"
             ],
-            "time": "2016-03-31 21:02:10"
+            "time": "2016-04-27 17:07:23"
         },
         {
             "name": "gedmo/doctrine-extensions",
@@ -1595,12 +1595,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/schmittjoh/serializer.git",
-                "reference": "fe13a1f993ea3456e195b7820692f2eb2b6bbb48"
+                "reference": "2b16866a8716b0477309232f169edcadb6997617"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/schmittjoh/serializer/zipball/fe13a1f993ea3456e195b7820692f2eb2b6bbb48",
-                "reference": "fe13a1f993ea3456e195b7820692f2eb2b6bbb48",
+                "url": "https://api.github.com/repos/schmittjoh/serializer/zipball/2b16866a8716b0477309232f169edcadb6997617",
+                "reference": "2b16866a8716b0477309232f169edcadb6997617",
                 "shasum": ""
             },
             "require": {
@@ -1660,7 +1660,7 @@
                 "serialization",
                 "xml"
             ],
-            "time": "2015-10-27 09:24:41"
+            "time": "2016-04-29 05:37:44"
         },
         {
             "name": "jms/serializer-bundle",
@@ -2006,81 +2006,6 @@
                 "symfony"
             ],
             "time": "2016-04-11 08:02:08"
-        },
-        {
-            "name": "liip/functional-test-bundle",
-            "version": "dev-master",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/liip/LiipFunctionalTestBundle.git",
-                "reference": "7401da84b3da42cbde1fab51f26503ae9d6b8f02"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/liip/LiipFunctionalTestBundle/zipball/7401da84b3da42cbde1fab51f26503ae9d6b8f02",
-                "reference": "7401da84b3da42cbde1fab51f26503ae9d6b8f02",
-                "shasum": ""
-            },
-            "require": {
-                "doctrine/common": "~2.0",
-                "php": "^5.3.9|^7.0",
-                "symfony/browser-kit": "~2.3|~3.0",
-                "symfony/framework-bundle": "2.3.*|~2.7|~3.0"
-            },
-            "require-dev": {
-                "brianium/paratest": "~0.12.0|~0.13.2",
-                "doctrine/doctrine-fixtures-bundle": "~2.3",
-                "doctrine/orm": "^2.4.8",
-                "doctrine/phpcr-bundle": "~1.3",
-                "doctrine/phpcr-odm": "~1.3",
-                "hautelook/alice-bundle": "~0.2|~1.2",
-                "jackalope/jackalope-doctrine-dbal": "1.1.*|1.2.*",
-                "nelmio/alice": "~1.7|~2.0",
-                "phpunit/phpunit": "4.8.*|~5.2",
-                "symfony/assetic-bundle": "~2.3",
-                "symfony/monolog-bundle": "~2.4",
-                "symfony/symfony": "~2.3.1|~2.7|~3.0",
-                "twig/twig": "~1.12"
-            },
-            "suggest": {
-                "brianium/paratest": "Required when using paratest to parallelize tests",
-                "doctrine/dbal": "Required when using the fixture loading functionality with an ORM and SQLite",
-                "doctrine/doctrine-fixtures-bundle": "Required when using the fixture loading functionality",
-                "doctrine/orm": "Required when using the fixture loading functionality with an ORM and SQLite",
-                "hautelook/alice-bundle": "Required when using loadFixtureFiles functionality with custom providers",
-                "nelmio/alice": "Required when using loadFixtureFiles functionality",
-                "symfony/framework-bundle": "To use assertStatusCode and assertValidationErrors ~2.5"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-master": "1.6.x-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Liip\\FunctionalTestBundle\\": ""
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Liip AG",
-                    "homepage": "http://www.liip.ch/"
-                },
-                {
-                    "name": "Community contributions",
-                    "homepage": "https://github.com/liip/LiipFunctionalTestBundle/contributors"
-                }
-            ],
-            "description": "This bundles provides additional functional test-cases for Symfony2 applications",
-            "keywords": [
-                "Symfony2"
-            ],
-            "time": "2016-04-15 09:58:44"
         },
         {
             "name": "liip/imagine-bundle",
@@ -2577,7 +2502,7 @@
             "source": {
                 "type": "git",
                 "url": "/home/geoffroy/Dev/phpink/nami-core-bundle",
-                "reference": "97c7b83f75a12bd36317439ac7cfab032d4efffe"
+                "reference": "261b67bb343c4ef81191ac853aa7e66da1375efe"
             },
             "require": {
                 "doctrine/doctrine-bundle": "^1.6",
@@ -2640,7 +2565,7 @@
                 "Nami",
                 "REST"
             ],
-            "time": "2016-04-27 13:00:18"
+            "time": "2016-04-30 08:35:11"
         },
         {
             "name": "phpoption/phpoption",
@@ -3103,12 +3028,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "fffbc0e2a7e376dbb0a4b5f2ff6847330f20ccf9"
+                "reference": "5538ee0bd809bef878b2a98ac685edf92a300465"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/fffbc0e2a7e376dbb0a4b5f2ff6847330f20ccf9",
-                "reference": "fffbc0e2a7e376dbb0a4b5f2ff6847330f20ccf9",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/5538ee0bd809bef878b2a98ac685edf92a300465",
+                "reference": "5538ee0bd809bef878b2a98ac685edf92a300465",
                 "shasum": ""
             },
             "require": {
@@ -3148,7 +3073,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2016-01-03 15:42:47"
+            "time": "2016-04-30 08:43:28"
         },
         {
             "name": "symfony/assetic-bundle",
@@ -3627,12 +3552,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "b26ff03bf8ba18e0f519708a283f487f56ec2eb8"
+                "reference": "352997e61e32f444162aeb04bbfe0db2ea657f45"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/b26ff03bf8ba18e0f519708a283f487f56ec2eb8",
-                "reference": "b26ff03bf8ba18e0f519708a283f487f56ec2eb8",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/352997e61e32f444162aeb04bbfe0db2ea657f45",
+                "reference": "352997e61e32f444162aeb04bbfe0db2ea657f45",
                 "shasum": ""
             },
             "require": {
@@ -3753,7 +3678,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2016-04-27 07:37:23"
+            "time": "2016-04-29 15:38:41"
         },
         {
             "name": "twig/extensions",
@@ -4186,6 +4111,81 @@
                 "persistence"
             ],
             "time": "2015-11-04 21:23:23"
+        },
+        {
+            "name": "liip/functional-test-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/liip/LiipFunctionalTestBundle.git",
+                "reference": "7401da84b3da42cbde1fab51f26503ae9d6b8f02"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/liip/LiipFunctionalTestBundle/zipball/7401da84b3da42cbde1fab51f26503ae9d6b8f02",
+                "reference": "7401da84b3da42cbde1fab51f26503ae9d6b8f02",
+                "shasum": ""
+            },
+            "require": {
+                "doctrine/common": "~2.0",
+                "php": "^5.3.9|^7.0",
+                "symfony/browser-kit": "~2.3|~3.0",
+                "symfony/framework-bundle": "2.3.*|~2.7|~3.0"
+            },
+            "require-dev": {
+                "brianium/paratest": "~0.12.0|~0.13.2",
+                "doctrine/doctrine-fixtures-bundle": "~2.3",
+                "doctrine/orm": "^2.4.8",
+                "doctrine/phpcr-bundle": "~1.3",
+                "doctrine/phpcr-odm": "~1.3",
+                "hautelook/alice-bundle": "~0.2|~1.2",
+                "jackalope/jackalope-doctrine-dbal": "1.1.*|1.2.*",
+                "nelmio/alice": "~1.7|~2.0",
+                "phpunit/phpunit": "4.8.*|~5.2",
+                "symfony/assetic-bundle": "~2.3",
+                "symfony/monolog-bundle": "~2.4",
+                "symfony/symfony": "~2.3.1|~2.7|~3.0",
+                "twig/twig": "~1.12"
+            },
+            "suggest": {
+                "brianium/paratest": "Required when using paratest to parallelize tests",
+                "doctrine/dbal": "Required when using the fixture loading functionality with an ORM and SQLite",
+                "doctrine/doctrine-fixtures-bundle": "Required when using the fixture loading functionality",
+                "doctrine/orm": "Required when using the fixture loading functionality with an ORM and SQLite",
+                "hautelook/alice-bundle": "Required when using loadFixtureFiles functionality with custom providers",
+                "nelmio/alice": "Required when using loadFixtureFiles functionality",
+                "symfony/framework-bundle": "To use assertStatusCode and assertValidationErrors ~2.5"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.6.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Liip\\FunctionalTestBundle\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Liip AG",
+                    "homepage": "http://www.liip.ch/"
+                },
+                {
+                    "name": "Community contributions",
+                    "homepage": "https://github.com/liip/LiipFunctionalTestBundle/contributors"
+                }
+            ],
+            "description": "This bundles provides additional functional test-cases for Symfony2 applications",
+            "keywords": [
+                "Symfony2"
+            ],
+            "time": "2016-04-15 09:58:44"
         },
         {
             "name": "sensio/generator-bundle",
