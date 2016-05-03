@@ -1,11 +1,10 @@
 {
-    "name": "symfony/framework-standard-edition",
+    "name": "nphpink/nami-demo-cms",
     "license": "MIT",
     "type": "project",
-    "description": "The \"Symfony Standard Edition\" distribution",
+    "description": "A demo app with Nami",
     "autoload": {
         "psr-4": {
-            "NamiPlugin\\": "plugins/",
             "": "src/"
         },
         "classmap": [ "app/AppKernel.php", "app/AppCache.php" ]
@@ -17,7 +16,8 @@
         "php": ">=5.5.9",
         "doctrine/orm": "^2.5",
         "phpink/nami-core-bundle": "dev-features-sf3",
-        "phpink/nami-admin-bundle": "*"
+        "phpink/nami-admin-bundle": "*",
+        "phpink/nami-contactform-bundle": "*"
     },
     "require-dev": {
         "sensio/generator-bundle": "^3.0",
@@ -29,6 +29,10 @@
         {
             "type": "vcs",
             "url": "https://github.com/phpink/nami-core-bundle"
+        },
+        {
+            "type": "vcs",
+            "url": "/home/geoffroy/Dev/phpink/nami-contactform-bundle"
         }
     ],
     "scripts": {

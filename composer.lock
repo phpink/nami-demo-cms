@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "0c958a13456b7c0f43a8838248f93a11",
-    "content-hash": "9c1eb2668f716a5612f6ef2fd011d6af",
+    "hash": "0ff0e9de0aa73f1c56fe8453d1ef3426",
+    "content-hash": "1e29a1cd15da34ed46eb9669a5550235",
     "packages": [
         {
             "name": "behat/transliterator",
@@ -2497,17 +2497,59 @@
             "time": "2016-03-20 03:29:31"
         },
         {
+            "name": "phpink/nami-contactform-bundle",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "/home/geoffroy/Dev/phpink/nami-contactform-bundle",
+                "reference": "b0bacb990290e02b8f71d14f2f040a376cb1dfdc"
+            },
+            "require": {
+                "php": ">=5.5.9",
+                "phpink/nami-core-bundle": "*"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "0.1-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "PhpInk\\Nami\\ContactFormBundle\\": ""
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Geoffroy Pierret",
+                    "email": "geoffroy@php.ink"
+                }
+            ],
+            "description": "Nami CMS - ContactForm Bundle",
+            "homepage": "http://nami.php.ink",
+            "keywords": [
+                "Contact",
+                "Nami",
+                "Plugin",
+                "form"
+            ],
+            "time": "2016-04-30 19:26:38"
+        },
+        {
             "name": "phpink/nami-core-bundle",
             "version": "dev-features-sf3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpink/nami-core-bundle.git",
-                "reference": "c269c69029b9563a40b8eb846775a476644c9bbc"
+                "reference": "78e42ff02ccce3494047dc75c5f8e348bb39f0ed"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpink/nami-core-bundle/zipball/c269c69029b9563a40b8eb846775a476644c9bbc",
-                "reference": "c269c69029b9563a40b8eb846775a476644c9bbc",
+                "url": "https://api.github.com/repos/phpink/nami-core-bundle/zipball/78e42ff02ccce3494047dc75c5f8e348bb39f0ed",
+                "reference": "78e42ff02ccce3494047dc75c5f8e348bb39f0ed",
                 "shasum": ""
             },
             "require": {
@@ -2528,7 +2570,7 @@
                 "symfony/assetic-bundle": "~2.7",
                 "symfony/monolog-bundle": "^2.8",
                 "symfony/swiftmailer-bundle": "^2.3",
-                "symfony/symfony": "3.0.0",
+                "symfony/symfony": "3.0.3",
                 "twig/extensions": "1.1.0",
                 "willdurand/hateoas-bundle": "^1.0"
             },
@@ -2575,7 +2617,7 @@
                 "source": "https://github.com/phpink/nami-core-bundle/tree/features-sf3",
                 "issues": "https://github.com/phpink/nami-core-bundle/issues"
             },
-            "time": "2016-04-30 12:09:33"
+            "time": "2016-04-30 12:22:09"
         },
         {
             "name": "phpoption/phpoption",
@@ -2992,12 +3034,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/swiftmailer/swiftmailer.git",
-                "reference": "18f52d0894c06bc7ac36a2249815798d6b6860cf"
+                "reference": "bf40b5635c09e09eaad9c48bcb245ca4a6961401"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/18f52d0894c06bc7ac36a2249815798d6b6860cf",
-                "reference": "18f52d0894c06bc7ac36a2249815798d6b6860cf",
+                "url": "https://api.github.com/repos/swiftmailer/swiftmailer/zipball/bf40b5635c09e09eaad9c48bcb245ca4a6961401",
+                "reference": "bf40b5635c09e09eaad9c48bcb245ca4a6961401",
                 "shasum": ""
             },
             "require": {
@@ -3037,7 +3079,7 @@
                 "mail",
                 "mailer"
             ],
-            "time": "2016-04-30 09:09:19"
+            "time": "2016-04-30 13:52:30"
         },
         {
             "name": "symfony/assetic-bundle",
@@ -3512,16 +3554,16 @@
         },
         {
             "name": "symfony/symfony",
-            "version": "v3.0.0",
+            "version": "v3.0.3",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/symfony.git",
-                "reference": "eb2a4f5f7a09fc4ce7a74ae883a8cf8a279614f5"
+                "reference": "09ae53562ce8b7842206efa217ec81442975f055"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/symfony/zipball/eb2a4f5f7a09fc4ce7a74ae883a8cf8a279614f5",
-                "reference": "eb2a4f5f7a09fc4ce7a74ae883a8cf8a279614f5",
+                "url": "https://api.github.com/repos/symfony/symfony/zipball/09ae53562ce8b7842206efa217ec81442975f055",
+                "reference": "09ae53562ce8b7842206efa217ec81442975f055",
                 "shasum": ""
             },
             "require": {
@@ -3591,8 +3633,9 @@
                 "doctrine/orm": "~2.4,>=2.4.5",
                 "egulias/email-validator": "~1.2",
                 "monolog/monolog": "~1.11",
-                "ocramius/proxy-manager": "~0.4|~1.0",
+                "ocramius/proxy-manager": "~0.4|~1.0|~2.0",
                 "phpdocumentor/reflection": "^1.0.7",
+                "symfony/polyfill-apcu": "~1.1",
                 "symfony/security-acl": "~2.8|~3.0"
             },
             "type": "library",
@@ -3606,7 +3649,6 @@
                     "Symfony\\Bridge\\Doctrine\\": "src/Symfony/Bridge/Doctrine/",
                     "Symfony\\Bridge\\Monolog\\": "src/Symfony/Bridge/Monolog/",
                     "Symfony\\Bridge\\ProxyManager\\": "src/Symfony/Bridge/ProxyManager/",
-                    "Symfony\\Bridge\\Swiftmailer\\": "src/Symfony/Bridge/Swiftmailer/",
                     "Symfony\\Bridge\\Twig\\": "src/Symfony/Bridge/Twig/",
                     "Symfony\\Bundle\\": "src/Symfony/Bundle/",
                     "Symfony\\Component\\": "src/Symfony/Component/"
@@ -3637,7 +3679,7 @@
             "keywords": [
                 "framework"
             ],
-            "time": "2015-11-30 20:59:43"
+            "time": "2016-02-28 21:33:29"
         },
         {
             "name": "twig/extensions",
@@ -4077,12 +4119,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/liip/LiipFunctionalTestBundle.git",
-                "reference": "7401da84b3da42cbde1fab51f26503ae9d6b8f02"
+                "reference": "6ab2fafaa646313eeea346a7376ee5c1ae84f713"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/liip/LiipFunctionalTestBundle/zipball/7401da84b3da42cbde1fab51f26503ae9d6b8f02",
-                "reference": "7401da84b3da42cbde1fab51f26503ae9d6b8f02",
+                "url": "https://api.github.com/repos/liip/LiipFunctionalTestBundle/zipball/6ab2fafaa646313eeea346a7376ee5c1ae84f713",
+                "reference": "6ab2fafaa646313eeea346a7376ee5c1ae84f713",
                 "shasum": ""
             },
             "require": {
@@ -4144,7 +4186,7 @@
             "keywords": [
                 "Symfony2"
             ],
-            "time": "2016-04-15 09:58:44"
+            "time": "2016-04-30 15:56:46"
         },
         {
             "name": "myclabs/deep-copy",

@@ -441,7 +441,7 @@ $this->format = null;
 public static function createFromGlobals()
 {
 $server = $_SERVER;
-if ('cli-server'=== PHP_SAPI) {
+if ('cli-server'=== php_sapi_name()) {
 if (array_key_exists('HTTP_CONTENT_LENGTH', $_SERVER)) {
 $server['CONTENT_LENGTH'] = $_SERVER['HTTP_CONTENT_LENGTH'];
 }
@@ -724,7 +724,6 @@ $clientIps[$key] = $clientIp = $match[1];
 }
 if (!filter_var($clientIp, FILTER_VALIDATE_IP)) {
 unset($clientIps[$key]);
-continue;
 }
 if (IpUtils::checkIp($clientIp, self::$trustedProxies)) {
 unset($clientIps[$key]);
@@ -936,27 +935,16 @@ static::initializeFormats();
 }
 return isset(static::$formats[$format]) ? static::$formats[$format][0] : null;
 }
-public static function getMimeTypes($format)
-{
-if (null === static::$formats) {
-static::initializeFormats();
-}
-return isset(static::$formats[$format]) ? static::$formats[$format] : array();
-}
 public function getFormat($mimeType)
 {
-$canonicalMimeType = null;
 if (false !== $pos = strpos($mimeType,';')) {
-$canonicalMimeType = substr($mimeType, 0, $pos);
+$mimeType = substr($mimeType, 0, $pos);
 }
 if (null === static::$formats) {
 static::initializeFormats();
 }
 foreach (static::$formats as $format => $mimeTypes) {
 if (in_array($mimeType, (array) $mimeTypes)) {
-return $format;
-}
-if (null !== $canonicalMimeType && in_array($canonicalMimeType, (array) $mimeTypes)) {
 return $format;
 }
 }
@@ -1266,7 +1254,7 @@ return $request;
 }
 return new static($query, $request, $attributes, $cookies, $files, $server, $content);
 }
-public function isFromTrustedProxy()
+private function isFromTrustedProxy()
 {
 return self::$trustedProxies && IpUtils::checkIp($this->server->get('REMOTE_ADDR'), self::$trustedProxies);
 }
@@ -1360,7 +1348,8 @@ public static $statusTexts = array(
 415 =>'Unsupported Media Type',
 416 =>'Range Not Satisfiable',
 417 =>'Expectation Failed',
-418 =>'I\'m a teapot', 422 =>'Unprocessable Entity', 423 =>'Locked', 424 =>'Failed Dependency', 425 =>'Reserved for WebDAV advanced collections expired proposal', 426 =>'Upgrade Required', 428 =>'Precondition Required', 429 =>'Too Many Requests', 431 =>'Request Header Fields Too Large', 451 =>'Unavailable For Legal Reasons', 500 =>'Internal Server Error',
+418 =>'I\'m a teapot', 422 =>'Unprocessable Entity', 423 =>'Locked', 424 =>'Failed Dependency', 425 =>'Reserved for WebDAV advanced collections expired proposal', 426 =>'Upgrade Required', 428 =>'Precondition Required', 429 =>'Too Many Requests', 431 =>'Request Header Fields Too Large', 451 =>'Unavailable For Legal Reasons',
+500 =>'Internal Server Error',
 501 =>'Not Implemented',
 502 =>'Bad Gateway',
 503 =>'Service Unavailable',
@@ -1445,11 +1434,7 @@ header($name.': '.$value, false, $this->statusCode);
 }
 header(sprintf('HTTP/%s %s %s', $this->version, $this->statusCode, $this->statusText), true, $this->statusCode);
 foreach ($this->headers->getCookies() as $cookie) {
-if ($cookie->isRaw()) {
-setrawcookie($cookie->getName(), $cookie->getValue(), $cookie->getExpiresTime(), $cookie->getPath(), $cookie->getDomain(), $cookie->isSecure(), $cookie->isHttpOnly());
-} else {
 setcookie($cookie->getName(), $cookie->getValue(), $cookie->getExpiresTime(), $cookie->getPath(), $cookie->getDomain(), $cookie->isSecure(), $cookie->isHttpOnly());
-}
 }
 return $this;
 }
@@ -2143,8 +2128,9 @@ $this->services = array();
 public function getServiceIds()
 {
 $ids = array();
-foreach (get_class_methods($this) as $method) {
-if (preg_match('/^get(.+)Service$/', $method, $match)) {
+$r = new \ReflectionClass($this);
+foreach ($r->getMethods() as $method) {
+if (preg_match('/^get(.+)Service$/', $method->name, $match)) {
 $ids[] = self::underscore($match[1]);
 }
 }
@@ -2246,14 +2232,14 @@ protected $booted = false;
 protected $name;
 protected $startTime;
 protected $loadClassCache;
-const VERSION ='3.1.0-DEV';
-const VERSION_ID = 30100;
+const VERSION ='3.0.3';
+const VERSION_ID = 30003;
 const MAJOR_VERSION = 3;
-const MINOR_VERSION = 1;
-const RELEASE_VERSION = 0;
-const EXTRA_VERSION ='DEV';
-const END_OF_MAINTENANCE ='01/2017';
-const END_OF_LIFE ='07/2017';
+const MINOR_VERSION = 0;
+const RELEASE_VERSION = 3;
+const EXTRA_VERSION ='';
+const END_OF_MAINTENANCE ='07/2016';
+const END_OF_LIFE ='01/2017';
 public function __construct($environment, $debug)
 {
 $this->environment = $environment;
@@ -2578,7 +2564,10 @@ $dumper = new PhpDumper($container);
 if (class_exists('ProxyManager\Configuration') && class_exists('Symfony\Bridge\ProxyManager\LazyProxy\PhpDumper\ProxyDumper')) {
 $dumper->setProxyDumper(new ProxyDumper(md5($cache->getPath())));
 }
-$content = $dumper->dump(array('class'=> $class,'base_class'=> $baseClass,'file'=> $cache->getPath(),'debug'=> $this->debug));
+$content = $dumper->dump(array('class'=> $class,'base_class'=> $baseClass,'file'=> $cache->getPath()));
+if (!$this->debug) {
+$content = static::stripComments($content);
+}
 $cache->write($content, $container->getResources());
 }
 protected function getContainerLoader(ContainerInterface $container)
@@ -2681,9 +2670,8 @@ return true;
 }
 public function findFile($class)
 {
-$file = apcu_fetch($this->prefix.$class, $success);
-if (!$success) {
-apcu_store($this->prefix.$class, $file = $this->decorated->findFile($class) ?: null);
+if (false === $file = apcu_fetch($this->prefix.$class)) {
+apcu_store($this->prefix.$class, $file = $this->decorated->findFile($class));
 }
 return $file;
 }
@@ -2934,10 +2922,7 @@ return parent::isFresh();
 }
 namespace Symfony\Component\HttpKernel
 {
-use Symfony\Component\HttpKernel\Controller\ArgumentResolver;
-use Symfony\Component\HttpKernel\Controller\ArgumentResolverInterface;
 use Symfony\Component\HttpKernel\Controller\ControllerResolverInterface;
-use Symfony\Component\HttpKernel\Event\FilterControllerArgumentsEvent;
 use Symfony\Component\HttpKernel\Exception\NotFoundHttpException;
 use Symfony\Component\HttpKernel\Exception\HttpExceptionInterface;
 use Symfony\Component\HttpKernel\Event\FilterControllerEvent;
@@ -2956,17 +2941,11 @@ class HttpKernel implements HttpKernelInterface, TerminableInterface
 protected $dispatcher;
 protected $resolver;
 protected $requestStack;
-private $argumentResolver;
-public function __construct(EventDispatcherInterface $dispatcher, ControllerResolverInterface $resolver, RequestStack $requestStack = null, ArgumentResolverInterface $argumentResolver = null)
+public function __construct(EventDispatcherInterface $dispatcher, ControllerResolverInterface $resolver, RequestStack $requestStack = null)
 {
 $this->dispatcher = $dispatcher;
 $this->resolver = $resolver;
 $this->requestStack = $requestStack ?: new RequestStack();
-$this->argumentResolver = $argumentResolver;
-if (null === $this->argumentResolver) {
-@trigger_error(sprintf('As of 3.1 an %s is used to resolve arguments. In 4.0 the $argumentResolver becomes the %s if no other is provided instead of using the $resolver argument.', ArgumentResolverInterface::class, ArgumentResolver::class), E_USER_DEPRECATED);
-$this->argumentResolver = $resolver;
-}
 }
 public function handle(Request $request, $type = HttpKernelInterface::MASTER_REQUEST, $catch = true)
 {
@@ -3009,11 +2988,7 @@ throw new NotFoundHttpException(sprintf('Unable to find the controller for path 
 $event = new FilterControllerEvent($this, $controller, $request, $type);
 $this->dispatcher->dispatch(KernelEvents::CONTROLLER, $event);
 $controller = $event->getController();
-$arguments = $this->argumentResolver->getArguments($request, $controller);
-$event = new FilterControllerArgumentsEvent($this, $controller, $arguments, $request, $type);
-$this->dispatcher->dispatch(KernelEvents::CONTROLLER_ARGUMENTS, $event);
-$controller = $event->getController();
-$arguments = $event->getArguments();
+$arguments = $this->resolver->getArguments($request, $controller);
 $response = call_user_func_array($controller, $arguments);
 if (!$response instanceof Response) {
 $event = new GetResponseForControllerResultEvent($this, $request, $type, $response);
