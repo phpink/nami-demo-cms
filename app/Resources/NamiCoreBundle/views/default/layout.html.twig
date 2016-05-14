@@ -33,9 +33,7 @@
 
     <div class="container">
         {% for block in page.getBlocks() %}
-            {%  if block.getType() == 'default' %}
-                {% include 'NamiCoreBundle:block:block-' ~ block.getTemplate() ~ '.html.twig' with {'block': block} %}
-            {% endif %}
+            {% include 'NamiCoreBundle:block:block-' ~ block.getTemplate() ~ '.html.twig' with {'block': block} %}
         {% endfor %}
     </div>
 

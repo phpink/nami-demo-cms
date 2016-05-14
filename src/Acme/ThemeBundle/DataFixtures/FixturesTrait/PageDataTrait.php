@@ -8,12 +8,12 @@ trait PageDataTrait
 {
     private $images = array();
 
-    public function createImage($data, $folder)
+    public function createBackground($data, $folder)
     {
         $background = null;
         if (is_array($data)) {
             if (!array_key_exists($data['url'], $this->images)) {
-                $background = $this->createImageModel($data['name'], $folder);
+                $background = $this->createBackgroundModel($data['name'], $folder);
                 $background->setFilename($data['url']);
                 $this->images{$data['url']} = $background;
             } else {
@@ -21,6 +21,21 @@ trait PageDataTrait
             }
         }
         return $background;
+    }
+
+    public function createBlockImage($data, $folder)
+    {
+        $image = null;
+        if (is_array($data)) {
+            if (!array_key_exists($data['url'], $this->images)) {
+                $image = $this->createBlockImageModel($data['name'], $folder);
+                $image->setFilename($data['url']);
+                $this->images{$data['url']} = $image;
+            } else {
+                $image = $this->images{$data['url']};
+            }
+        }
+        return $image;
     }
 
     public function createPage($key, $data)
@@ -35,7 +50,7 @@ trait PageDataTrait
             ->setMetaKeywords($data['metaKeywords'])
             ->setMetaDescription($data['metaDescription'])
             ->setBackground(
-                $this->createImage(
+                $this->createBackground(
                     $data['background'], 'background'
                 )
             )
@@ -58,7 +73,7 @@ trait PageDataTrait
             if (isset($blockData['images'])) {
                 foreach ($blockData['images'] as $image) {
                     $block->addImage(
-                        $this->createImage(
+                        $this->createBlockImage(
                             $image, 'block'
                         )
                     );

@@ -43,7 +43,7 @@ trait UserDataTrait
             ->setPhone($data['phone']);
 
         if (!array_key_exists($data['avatar'], $this->savedImage)) {
-            $avatar = $this->createImageModel(
+            $avatar = $this->createUserImageModel(
                 'User avatar', 'avatar'
             );
             $avatar->setFilename($data['avatar']);

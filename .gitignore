@@ -1,12 +1,13 @@
-.idea/*
-/vendor/
+.idea
+/vendor
 /web/bundles/
 /web/css/
 /web/js/
 /web/media/cache/*
 /app/cache/
 /app/logs/
-/var/cache
-/var/logs/
+/var/cache/*
+/var/logs/*
+/var/spool/*
 .gitkeep
 

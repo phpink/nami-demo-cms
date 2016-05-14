@@ -42,3 +42,7 @@ fieldset {
 textarea {
     resize: vertical;
 }
+
+.m-b {
+    margin-bottom: 5px;
+}
