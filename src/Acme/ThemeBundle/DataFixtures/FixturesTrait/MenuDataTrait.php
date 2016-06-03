@@ -10,7 +10,6 @@ trait MenuDataTrait
     {
         $category = $this->createMenuLinkModel();
         $category
-            ->setActive(true)
             ->setPosition($data['position'])
             ->setName($data['name'])
 
@@ -50,7 +49,7 @@ trait MenuDataTrait
                 'position' =>  1,
                 'parent' => null,
                 'name' => 'News',
-                'title' => 'News category',
+                'title' => 'News',
                 'link' => '/news',
             ),
             'test' => array(
@@ -58,7 +57,7 @@ trait MenuDataTrait
                 'parent' => null,
                 'name' => 'Test',
                 'title' => 'Test category',
-                'link' => '/test',
+                'link' => '/category/test',
             ),
             'contact' => array(
                 'position' =>  2,

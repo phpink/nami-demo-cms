@@ -15,7 +15,7 @@
     "require": {
         "php": ">=5.5.9",
         "doctrine/orm": "^2.5",
-        "phpink/nami-core-bundle": "dev-features-sf3",
+        "phpink/nami-core-bundle": "*",
         "phpink/nami-admin-bundle": "*",
         "phpink/nami-contactform-bundle": "*"
     },
@@ -24,8 +24,7 @@
         "phpunit/phpunit": "~5.0",
         "liip/functional-test-bundle": "1.6.x",
         "doctrine/doctrine-fixtures-bundle": "2.3.0",
-        "doctrine/mongodb-odm": "1.0.*@dev",
-        "doctrine/mongodb-odm-bundle": "3.0.*@dev"
+        "doctrine/mongodb-odm-bundle": "^3.1"
     },
     "repositories": [
         {

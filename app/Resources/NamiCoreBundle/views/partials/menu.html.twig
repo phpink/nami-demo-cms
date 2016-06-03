@@ -14,30 +14,7 @@
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                {% for category in menu %}
-                    {% set isCurrentCategory = (app.request.attributes.get('_route') == 'nami_front_page') and (app.request.attributes.get('slug') == category.getSlug()) %}
-                    <li{% if isCurrentCategory or category.hasPages() %}
-                        class="{% if isCurrentCategory %}active {% endif %}{% if category.hasPages() %}dropdown{% endif %}"
-                            {% endif %}>
-                        <a href="{{ path('nami_front_page', { 'slug': category.getSlug() }) }}" title="{{ category.getTitle() }}"{% if category.hasPages() %} class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"{% endif %}>{{ category.getName() }}{% if category.hasPages() %} <span class="caret"></span></a>{% endif %}</a>
-                        {% if category.hasPages() %}
-                            <ul class="dropdown-menu">
-                                {% for page in category.getPages() %}
-                                    {% set isCurrentPage = (app.request.attributes.get('_route') == 'nami_front_page' and app.request.attributes.get('slug') == page.getSlug()) %}
-                                    <li{% if isCurrentPage %} class="active"{% endif %}><a href="{{ path('nami_front_page', { 'slug': page.getSlug() }) }}" title="{{ page.getHeader() }}">{{ page.getTitle() }}</a></li>
-                                {% endfor %}
-                            </ul>
-                        {% endif %}
-                    </li>
-                {% endfor %}
-
-                <li{% if app.request.attributes.get('_route') == 'nami_front_page' and app.request.attributes.get('slug') == 'contact' %}
-                    class="active"{% endif %}>
-                    <a href="{{ path('nami_front_page', { 'slug': 'contact' }) }}" title="Contact us">Contact</a>
-                </li>
-
-            </ul>
+            {{ knp_menu_render(menu, {'currentClass': 'active', 'template': 'NamiCoreBundle:partials:knp_menu.html.twig'}) }}
         </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
 </nav>

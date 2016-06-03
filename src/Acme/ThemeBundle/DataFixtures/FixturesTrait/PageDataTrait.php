@@ -135,7 +135,27 @@ trait PageDataTrait
                 )
 
             ),
-            'news1' => array(
+            'news' => array(
+                'title' => "Nami CMS - News",
+                'header' => 'NAMI <strong>CMS</strong> news',
+                'metaKeywords' => "nami, cms, symfony",
+                'metaDescription' => "Nami, a basic Content management system for Symfony",
+                'background' => null,
+                'category' => 'news',
+                'backgroundColor' => null,
+                'borderColor' => null,
+                'footerColor' => null,
+                'negativeText' => false,
+                'blocks' => array(
+                    array(
+                        'title' => 'News',
+                        'content' => '<p>Nami news.</p>',
+                        'template' => 'default'
+                    ),
+                )
+
+            ),
+            'news/news1' => array(
                 'title' => "Nami CMS - News 1",
                 'header' => 'NAMI <strong>CMS</strong> news #1',
                 'metaKeywords' => "nami, cms, symfony",
@@ -161,7 +181,7 @@ trait PageDataTrait
                 )
 
             ),
-            'news2' => array(
+            'news/news2' => array(
                 'title' => "Nami CMS - News 2",
                 'header' => 'NAMI <strong>CMS</strong> news #2',
                 'metaKeywords' => "nami, cms, symfony",

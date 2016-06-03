@@ -11,7 +11,6 @@ trait CategoryDataTrait
         $category = $this->createCategoryModel();
         $category
             ->setActive(true)
-            ->setPosition($data['position'])
             ->setName($data['name'])
 
             ->setTitle($data['title'])
@@ -43,7 +42,6 @@ trait CategoryDataTrait
              * Main categories
              */
             'news' => array(
-                'position' =>  2,
                 'parent' => null,
                 'name' => 'News',
                 'title' => 'News category',
@@ -51,16 +49,33 @@ trait CategoryDataTrait
                 'metaKeywords' => 'news,category,data',
                 'metaDescription' => 'News category SEO',
                 'content' => '<p>News category description</p>'
+            ),
+            'tech' => array(
+                'parent' => 'news',
+                'name' => 'Technology',
+                'title' => 'Tech category',
+                'header' => 'Technology',
+                'metaKeywords' => 'tech,category',
+                'metaDescription' => 'Tech category SEO',
+                'content' => '<p>Tech category description</p>>'
+            ),
+            'buzz' => array(
+                'parent' => 'news',
+                'name' => '3d',
+                'title' => 'Buzz category',
+                'header' => 'Buzz',
+                'metaKeywords' => 'buzz,category',
+                'metaDescription' => 'Buzz category SEO',
+                'content' => '<p>Buzz category description</p>>'
             ),            
             'Test' => array(
-                'position' =>  2,
                 'parent' => null,
                 'name' => 'Test',
                 'title' => 'Test category',
                 'header' => 'Test',
                 'metaKeywords' => 'test,category,db',
                 'metaDescription' => 'Test category SEO',
-                'content' => '<p>Test category description</p>>'
+                'content' => '<p>Test category description</p>'
             ),
         );
 
