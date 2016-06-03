@@ -1,5 +1,0 @@
-services:
-    namiplugin_sitemap_controller:
-        class: NamiPlugin\Sitemap\Controller\SitemapController
-        arguments:
-            - "@service_container"
