@@ -31,9 +31,19 @@ class FixtureData extends AbstractFixture implements ContainerAwareInterface
         return new Model\Page();
     }
 
-    public function createImageModel($name, $folder)
+    public function createBackgroundModel($name, $folder)
     {
-        return new Model\Image($name, $folder);
+        return new Model\Image\Background($name, $folder);
+    }
+
+    public function createBlockImageModel($name, $folder)
+    {
+        return new Model\Image\BlockImage($name, $folder);
+    }
+
+    public function createUserImageModel($name, $folder)
+    {
+        return new Model\Image\UserImage($name, $folder);
     }
 
     public function createBlockModel($title, $content)

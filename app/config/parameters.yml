@@ -33,3 +33,4 @@ parameters:
     nami_core.google_api_keyfile: null
     nami_core.google_api_id: null
     nami_core.google_analytics_view: null
+    nami_contact_form.mail_to: '%nami_core.mailer_to%'

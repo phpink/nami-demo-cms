@@ -8,12 +8,12 @@ trait PageDataTrait
 {
     private $images = array();
 
-    public function createImage($data, $folder)
+    public function createBackground($data, $folder)
     {
         $background = null;
         if (is_array($data)) {
             if (!array_key_exists($data['url'], $this->images)) {
-                $background = $this->createImageModel($data['name'], $folder);
+                $background = $this->createBackgroundModel($data['name'], $folder);
                 $background->setFilename($data['url']);
                 $this->images{$data['url']} = $background;
             } else {
@@ -21,6 +21,21 @@ trait PageDataTrait
             }
         }
         return $background;
+    }
+
+    public function createBlockImage($data, $folder)
+    {
+        $image = null;
+        if (is_array($data)) {
+            if (!array_key_exists($data['url'], $this->images)) {
+                $image = $this->createBlockImageModel($data['name'], $folder);
+                $image->setFilename($data['url']);
+                $this->images{$data['url']} = $image;
+            } else {
+                $image = $this->images{$data['url']};
+            }
+        }
+        return $image;
     }
 
     public function createPage($key, $data)
@@ -35,7 +50,7 @@ trait PageDataTrait
             ->setMetaKeywords($data['metaKeywords'])
             ->setMetaDescription($data['metaDescription'])
             ->setBackground(
-                $this->createImage(
+                $this->createBackground(
                     $data['background'], 'background'
                 )
             )
@@ -58,7 +73,7 @@ trait PageDataTrait
             if (isset($blockData['images'])) {
                 foreach ($blockData['images'] as $image) {
                     $block->addImage(
-                        $this->createImage(
+                        $this->createBlockImage(
                             $image, 'block'
                         )
                     );
@@ -120,7 +135,27 @@ trait PageDataTrait
                 )
 
             ),
-            'news1' => array(
+            'news' => array(
+                'title' => "Nami CMS - News",
+                'header' => 'NAMI <strong>CMS</strong> news',
+                'metaKeywords' => "nami, cms, symfony",
+                'metaDescription' => "Nami, a basic Content management system for Symfony",
+                'background' => null,
+                'category' => 'news',
+                'backgroundColor' => null,
+                'borderColor' => null,
+                'footerColor' => null,
+                'negativeText' => false,
+                'blocks' => array(
+                    array(
+                        'title' => 'News',
+                        'content' => '<p>Nami news.</p>',
+                        'template' => 'default'
+                    ),
+                )
+
+            ),
+            'news/news1' => array(
                 'title' => "Nami CMS - News 1",
                 'header' => 'NAMI <strong>CMS</strong> news #1',
                 'metaKeywords' => "nami, cms, symfony",
@@ -146,7 +181,7 @@ trait PageDataTrait
                 )
 
             ),
-            'news2' => array(
+            'news/news2' => array(
                 'title' => "Nami CMS - News 2",
                 'header' => 'NAMI <strong>CMS</strong> news #2',
                 'metaKeywords' => "nami, cms, symfony",

@@ -1,4 +1,0 @@
-parameters:
-  namiplugin.contactform.mail_to: "email@provider.com"
-  namiplugin.contactform.mail_template: "@@NamiPlugin/ContactForm/views/mail.html.twig"
-  namiplugin.contactform.block_template: "@@NamiPlugin/ContactForm/views/block.html.twig"

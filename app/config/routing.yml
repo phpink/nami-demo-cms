@@ -26,6 +26,13 @@ nami_front_extra:
     methods:  [GET, POST]
     defaults: { _controller: AcmeThemeBundle:Frontend:test }
 
+nami_front_category:
+    path:     /category/{slug}
+    methods:  [GET, POST]
+    defaults: { _controller: NamiCoreBundle:Frontend:category }
+    requirements:
+        slug: .+
+
 nami_front_page:
     path:     /{slug}
     methods:  [GET, POST]
